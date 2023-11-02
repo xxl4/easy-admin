@@ -1,0 +1,28 @@
+{
+    "Parameter validation failed": "Parameter Validation failed",
+    "Failed to upload third party": "Failed to Upload third Party",
+    "Picture cannot be empty": "Picture can't be empty",
+    "Query failed": "Query Failed",
+    "Query successful": "Query Successfully",
+    "Successfully deleted": "Successfully Delete",
+    "Failed to delete": "Failed to delete",
+    "Service initialization failed": "Service Initialization Failed!",
+    "Update failed": "Update Failed",
+    "Update completed": "Update completed",
+    "Creation failed": "Created Failed",
+    "Created successfully": "Created Successfully",
+    "Failed to obtain verification code": "Failed to Obtain verification code",
+    "Failed to delete! Error details": "Failed to delete！Error Detail ：%s",
+    "Failed to create dictionary type details": "Failed to Create dictionary type，detail：%s",
+    "Database connection acquisition failed": "Database connection acquistion Failed",
+    "Model generation failed": "Model Generation Failed",
+    "No right to delete this data": "No Right To Delete this data",
+    "Don not have permission to update this data": "Don't have permission to Update this Data",
+    "View failed": "View Failed!",
+    "The object being viewed does not exist or does not have permission to view it": "The Object being viewed does not exist or does not have permission to view",
+    "Sorry code generation is not supported for sqlite3 or postgres": "Sorrty，sqlite3 Or postgres don't Support code generation",
+
+
+
+    "Initialization file path failed": "Initialization file path failed"
+}
