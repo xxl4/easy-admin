@@ -35,7 +35,7 @@ jobs:
         run: cd ./ui/ && npm install
         
       - name : npm build
-        run: cd ./ui/ && npm run build:prod
+        run: cd ./ui/ && npm run build:prod --legacy-peer-deps
 
   build:
     runs-on: ubuntu-latest
