@@ -1,0 +1,23 @@
+theme: jekyll-theme-cayman
+show_downloads: true
+title: Easy Admin Service
+description: Build a full-featured administrative interface quickly easy-admin
+lsi: false
+safe: true
+source: [/]
+incremental: false
+highlighter: rouge
+page_excerpts: true
+google_analytics: G-Z7L6BT187M
+is_project_page: true
+url: https://nicelizhi.github.io/easy-admin
+paginate: 5
+site:
+  categories: ["Install"]
+  tags: ["Api", "Go", "Vue"]
+  pages: []
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
