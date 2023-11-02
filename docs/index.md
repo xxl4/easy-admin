@@ -26,8 +26,6 @@ The front-end and back-end separation authority management system based on Gin +
 
 - Code generation tool
 
-- Form builder
-
 - Multi-command mode
 
 - Multi Language
