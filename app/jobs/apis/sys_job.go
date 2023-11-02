@@ -53,7 +53,7 @@ func (e SysJob) StartJobForService(c *gin.Context) {
 	var v dto.GeneralGetDto
 	err = c.BindUri(&v)
 	if err != nil {
-		log.Warnf("参数验证错误, error: %s", err)
+		log.Warnf("Parameter validation failed, error: %s", err)
 		e.Error(http.StatusUnprocessableEntity, err, ginI18n.MustGetMessage(c, "Parameter validation failed"))
 		return
 	}

@@ -1,7 +1,6 @@
 package router
 
 import (
-	//"github.com/nicelizhi/easy-admin-core/sdk/pkg"
 	"os"
 
 	common "github.com/nicelizhi/easy-admin/common/middleware"
@@ -33,6 +32,5 @@ func InitRouter() {
 		log.Fatalf("JWT Init Error, %s", err.Error())
 	}
 
-	// 注册业务路由
 	initRouter(r, authMiddleware)
 }
