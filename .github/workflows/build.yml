@@ -32,7 +32,7 @@ jobs:
       - name: cd ui
         run: cd ./ui/ && ls -la
       - name: npm install
-        run: cd ./ui/ && npm install
+        run: cd ./ui/ && npm install --legacy-peer-deps
         
       - name : npm build
         run: cd ./ui/ && npm run build:prod --legacy-peer-deps
