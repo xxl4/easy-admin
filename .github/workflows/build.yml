@@ -44,8 +44,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'npm'
-          cache-dependency-path: ui/package-lock.json
       - name: Git Sumbodule Update
         run: |
           git submodule update --remote --recursive
