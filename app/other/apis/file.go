@@ -54,22 +54,22 @@ func (e File) UploadFile(c *gin.Context) {
 		if done {
 			return
 		}
-		e.OK(fileResponse, "上传成功")
+		e.OK(fileResponse, ginI18n.MustGetMessage(c, "Upload Success"))
 		return
 	case "2": // 多图
 		multipartFile := e.multipleFile(c, urlPrefix)
-		e.OK(multipartFile, "上传成功")
+		e.OK(multipartFile, ginI18n.MustGetMessage(c, "Upload Success"))
 		return
 	case "3": // base64
 		fileResponse = e.baseImg(c, fileResponse, urlPrefix)
-		e.OK(fileResponse, "上传成功")
+		e.OK(fileResponse, ginI18n.MustGetMessage(c, "Upload Success"))
 	default:
 		var done bool
 		fileResponse, done = e.singleFile(c, fileResponse, urlPrefix)
 		if done {
 			return
 		}
-		e.OK(fileResponse, "上传成功")
+		e.OK(fileResponse, ginI18n.MustGetMessage(c, "Upload Success"))
 		return
 	}
 

@@ -81,20 +81,20 @@ func (e Gen) Preview(c *gin.Context) {
 		return
 	}
 
-	t8, err := template.ParseFiles("template/v4/init_router.template")
+	t8, err := template.ParseFiles("template/" + TemplateVer + "/init_router.template")
 	if err != nil {
 		log.Error(err)
 		e.Error(500, err, err.Error())
 		return
 	}
-	t9, err := template.ParseFiles("template/v4/router.template")
+	t9, err := template.ParseFiles("template/" + TemplateVer + "/router.template")
 	if err != nil {
 		log.Error(err)
 		e.Error(500, err, err.Error())
 		return
 	}
 
-	t10, err := template.ParseFiles("template/v4/api_router.template")
+	t10, err := template.ParseFiles("template/" + TemplateVer + "/api_router.template")
 	if err != nil {
 		log.Error(err)
 		e.Error(500, err, err.Error())
@@ -296,20 +296,20 @@ func (e Gen) NOActionsGen(c *gin.Context, tab tools.SysTables) {
 		return
 	}
 
-	t8, err := template.ParseFiles("template/v4/init_router.template")
+	t8, err := template.ParseFiles(basePath + "init_router.template")
 	if err != nil {
 		log.Error(err)
 		e.Error(500, err, err.Error())
 		return
 	}
-	t9, err := template.ParseFiles("template/v4/router.template")
+	t9, err := template.ParseFiles(basePath + "router.template")
 	if err != nil {
 		log.Error(err)
 		e.Error(500, err, err.Error())
 		return
 	}
 
-	t10, err := template.ParseFiles("template/v4/api_router.template")
+	t10, err := template.ParseFiles(basePath + "api_router.template")
 	if err != nil {
 		log.Error(err)
 		e.Error(500, err, err.Error())
@@ -456,7 +456,7 @@ func (e Gen) GenMenuAndApi(c *gin.Context) {
 	id, err := pkg.StringToInt(c.Param("tableId"))
 	if err != nil {
 		e.Logger.Error(err)
-		e.Error(500, err, fmt.Sprintf("tableId参数解析失败！错误详情：%s", err.Error()))
+		e.Error(500, err, err.Error())
 		return
 	}
 
