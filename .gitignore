@@ -1,0 +1,12 @@
+.idea
+.vscode
+*/.DS_Store
+static/uploadfile
+easy-admin
+
+# release
+/release
+
+# go sum
+go.sum
+config/settings.dev_steve.yml

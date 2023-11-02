@@ -4,9 +4,9 @@
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/nicelizhi/easy-admin)
 
-English | [简体中文](https://github.com/nicelizhi/easy-admin/blob/master/README.Zh-cn.md)
+English | [简体中文](https://github.com/nicelizhi/easy-admin/blob/main/README.Zh-cn.md)
 
-The front-end and back-end separation authority management system based on Gin + Vue + Element UI OR Arco Design is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
+The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
 
 ## ✨ Feature
 
