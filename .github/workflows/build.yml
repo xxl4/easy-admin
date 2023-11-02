@@ -42,6 +42,11 @@ jobs:
 
      # - name: go Test
      #   run: go test
+      - name: npm install
+        run: cd ./ui/ && npm install
+        
+      - name : npm build
+        run: cd ./ui/ && npm run build:prod
 
       - name: Tidy
         run: go mod tidy

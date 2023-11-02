@@ -36,10 +36,8 @@ var rootCmd = &cobra.Command{
 }
 
 func tip() {
-	usageStr := `欢迎使用 ` + pkg.Green(`easy-admin `+global.Version) + ` 可以使用 ` + pkg.Red(`-h`) + ` 查看命令`
-	usageStr1 := `也可以参考 ` + global.HomePage + ` /guide/command 的相关内容`
+	usageStr := `Welcome to use ` + pkg.Green(`easy-admin `+global.Version) + ` you can use ` + pkg.Red(`-h`) + ` view all command`
 	fmt.Printf("%s\n", usageStr)
-	fmt.Printf("%s\n", usageStr1)
 }
 
 func init() {

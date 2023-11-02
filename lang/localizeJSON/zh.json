@@ -34,6 +34,7 @@
     "Data generation successful": "数据生成成功",
     "Data migration template parsing failed! Error details": "数据迁移模版解析失败！错误详情：%s",
     "Views directory creation failed! Error details": "views目录创建失败！错误详情：%s",
+    "Upload Success": "上传成功",
 
     
 

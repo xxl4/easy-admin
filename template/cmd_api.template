@@ -1,0 +1,8 @@
+package api
+
+import "github.com/nicelizhi/easy-admin/app/{{.appName}}/router"
+
+func init() {
+	//
+	AppRouters = append(AppRouters, router.InitRouter)
+}
