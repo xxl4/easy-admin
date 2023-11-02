@@ -1,6 +1,5 @@
 FROM alpine
 
-
 RUN apk update --no-cache
 RUN apk add --update gcc g++ libc6-compat
 RUN apk add --no-cache ca-certificates
