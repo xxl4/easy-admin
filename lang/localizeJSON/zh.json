@@ -1,0 +1,43 @@
+{
+    "Parameter validation failed": "参数验证失败",
+    "Failed to upload third party": "上传第三方失败",
+    "Picture cannot be empty": "图片不能为空",
+    "Query failed": "查询失败",
+    "Query successful": "查询成功",
+    "Successfully deleted": "删除成功",
+    "Failed to delete": "删除失败",
+    "Service initialization failed": "服务初始化失败！",
+    "Update failed": "更新失败",
+    "Update completed": "更新成功",
+    "Creation failed": "创建失败",
+    "Created successfully": "创建成功",
+    "Failed to obtain verification code": "验证码获取失败",
+    "Failed to delete! Error details": "删除失败！错误详情：%s",
+    "Failed to create dictionary type details": "创建字典类型失败，详情：%s",
+    "Database connection acquisition failed": "数据库连接获取失败",
+    "Model generation failed": "模型生成失败",
+    "No right to delete this data": "无权删除该数据",
+    "Don not have permission to update this data": "无权更新该数据",
+    "View failed": "查看失败",
+    "The object being viewed does not exist or does not have permission to view it": "查看对象不存在或无权查看",
+    "Sorry code generation is not supported for sqlite3 or postgres": "对不起，sqlite3 或 postgres 不支持代码生成！",
+
+    "Sorry you do not have access to this interface, contact your administrator": "对不起，您没有该接口访问权限，请联系管理员",
+    "The current request does not have permission please check by the administrator": "当前request无权限，请管理员确认！",
+    "Failed to receive tableId! Error details": "tableId接收失败！错误详情：%s",
+    "Model template reading failed! Error details": "model模版读取失败！错误详情：%s",
+    "API template reading failed! Error details": "api模版读取失败！错误详情：%s",
+    "Js template reading failed! Error details": "JS模版读取失败！错误详情：%s",
+    "Vue template reading failed! Error details": "vue模版读取失败！错误详情：%s",
+    "Failed to read routing template! Error details": "路由模版读取失败！错误详情：%s",
+    "Failed to obtain database link! Error details": "数据库链接获取失败！错误详情：%s",
+    "Data generation successful": "数据生成成功",
+    "Data migration template parsing failed! Error details": "数据迁移模版解析失败！错误详情：%s",
+    "Views directory creation failed! Error details": "views目录创建失败！错误详情：%s",
+
+    
+
+
+
+    "Initialization file path failed": "初始化文件路径失败"
+}
