@@ -29,6 +29,8 @@ jobs:
           git submodule update --remote --recursive
       - name: ls dir
         run: ls -la
+      - name: cd ui
+        run: cd ./ui/ && ls -la
 
   build:
     runs-on: ubuntu-latest
