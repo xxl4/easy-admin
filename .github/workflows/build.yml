@@ -1,0 +1,63 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+    paths-ignore:
+      - .github/**
+  pull_request:
+    branches: [ master ]
+    
+
+env:
+  IMAGE_NAME: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin # docker image
+  TAG: ${{ github.sha }}
+  IMAGE_NAME_TAG: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:${{ github.sha }}
+
+jobs:
+  sync:
+    name: 'Submodules Sync'
+    runs-on: ubuntu-latest
+    steps:
+      - name: check submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+      # Update references
+      - name: Git Sumbodule Update
+        run: |
+          git submodule update --remote --recursive
+
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        go-version: ['1.21']
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Go ${{ matrix.go-version }}
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ matrix.go-version }}
+
+     # - name: go Test
+     #   run: go test
+
+      - name: Tidy
+        run: go mod tidy
+
+      - name: Build
+        run: env CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -tags "sqlite3,json1" --ldflags "-extldflags -static" -o main .
+
+      - name: Build the Docker image and push
+        run: |
+          docker login --username=${{ secrets.DOCKER_USERNAME }} registry.ap-southeast-1.aliyuncs.com --password=${{ secrets.DOCKER_PASSWORD }}
+          echo "************ docker login end"
+          docker build -t easy-admin:latest .
+          echo "************ docker build end"
+          docker tag easy-admin ${{ secrets.IMAGE_NAME_TAG }}
+          echo "************ docker tag end"
+          docker images
+          echo "************ docker images end"
+          docker push ${{ secrets.IMAGE_NAME_TAG }}  # 推送
+          echo "************ docker push end"
