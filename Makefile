@@ -12,14 +12,14 @@ all:
 
 build-ui:
 	@echo "build node start"
-	cd ./admin-ui/ && npm run build:prod
+	cd ./ui/ && npm run build:prod
 
 build:
 	CGO_ENABLED=0 go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o easy-admin .
 
 # make build-linux
 build-linux:
-	@docker build -t go-admin:latest .
+	@docker build -t easy-admin:latest .
 	@echo "build successful"
 
 build-sqlite:
