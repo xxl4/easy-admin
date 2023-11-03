@@ -1,3 +1,24 @@
+# quick start
+
+## 1.1 config the file
+```
+vi ./config/settings.yml
+```
+## 1.2 import data
+```
+./easy-admin migrate
+```
+## 1.3 run command to start
+
+```
+./easy-admin server -c=config/settings.yml
+```
+
+
+# view all command
+```
+./easy-admin -h
+```
 # ⚙ config file full
 ```
 settings:
@@ -61,3 +82,7 @@ settings:
       name: data
 
 ```
+
+# Issue
+https://github.com/nicelizhi/easy-admin/issue  
+[https://gitee.com/nicelizhi/easy-admin/issues](https://gitee.com/nicelizhi/easy-admin/issues)  (中国)
