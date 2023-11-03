@@ -83,7 +83,8 @@ http://localhost:8000/swagger/admin/index.html
 [https://nicelizhi.github.io/easy-admin/](https://nicelizhi.github.io/easy-admin/) 
 
 # Issue
-[https://github.com/nicelizhi/easy-admin/issues](https://github.com/nicelizhi/easy-admin/issues) 
+[https://github.com/nicelizhi/easy-admin/issues](https://github.com/nicelizhi/easy-admin/issues)   
+[https://gitee.com/nicelizhi/easy-admin/issues](https://gitee.com/nicelizhi/easy-admin/issues)  (中国)
 
 # Discussions
 [https://github.com/nicelizhi/easy-admin/discussions](https://github.com/nicelizhi/easy-admin/discussions) 
