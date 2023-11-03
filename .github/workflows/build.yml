@@ -11,8 +11,8 @@ on:
 
 env:
   IMAGE_NAME: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin # docker image
-  TAG: ${{ github.sha }}
-  IMAGE_NAME_TAG: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:${{ github.sha }}
+  TAG: ${{ secrets.IMAGE_NAME_TAG }}
+  IMAGE_NAME_TAG: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:${{ secrets.IMAGE_NAME_TAG }}
 
 jobs:
   sync:
@@ -74,9 +74,9 @@ jobs:
           echo "************ docker login end"
           docker build -t easy-admin:latest .
           echo "************ docker build end"
-          docker tag easy-admin ${{ secrets.IMAGE_NAME_TAG }}
+          docker tag easy-admin ${{ env.IMAGE_NAME_TAG }}
           echo "************ docker tag end"
           docker images
           echo "************ docker images end"
-          docker push registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:${{ secrets.IMAGE_NAME_TAG }}  # 推送
+          docker push ${{ env.IMAGE_NAME_TAG }}  # 推送
           echo "************ docker push end"
