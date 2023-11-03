@@ -1,6 +1,8 @@
 [submodule "core"]
 	path = core
 	url = git@github.com:nicelizhi/easy-admin-core.git
+	branch = main
 [submodule "ui"]
 	path = ui
 	url = git@github.com:nicelizhi/easy-admin-ui.git
+	branch = main
