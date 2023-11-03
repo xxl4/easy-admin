@@ -8,6 +8,7 @@ import (
 	"github.com/nicelizhi/easy-admin-core/sdk/pkg"
 
 	"github.com/nicelizhi/easy-admin/cmd/app"
+	"github.com/nicelizhi/easy-admin/cmd/autocert"
 	"github.com/nicelizhi/easy-admin/common/global"
 
 	"github.com/spf13/cobra"
@@ -45,6 +46,7 @@ func init() {
 	rootCmd.AddCommand(migrate.StartCmd)
 	rootCmd.AddCommand(version.StartCmd)
 	rootCmd.AddCommand(app.StartCmd)
+	rootCmd.AddCommand(autocert.StartCmd)
 }
 
 // Execute : apply commands
