@@ -2,9 +2,9 @@
 # easy-admin
 [![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/nicelizhi/easy-admin)
+[![License](https://img.shields.io/github/license/nicelizhi/easy-admin
+)](https://github.com/nicelizhi/easy-admin)
 
-English | [简体中文](https://github.com/nicelizhi/easy-admin/blob/main/README.Zh-cn.md)
 
 The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
 
@@ -58,7 +58,7 @@ The front-end and back-end separation authority management system based on Gin +
 swag init --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
 ```
 
-# Online swag Document
+# Online wagger Document
 
 ```
 http://localhost:8000/swagger/admin/index.html
