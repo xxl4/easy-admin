@@ -78,5 +78,5 @@ jobs:
           echo "************ docker tag end"
           docker images
           echo "************ docker images end"
-          docker push ${{ secrets.IMAGE_NAME_TAG }}  # 推送
+          docker push registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:${{ secrets.IMAGE_NAME_TAG }}  # 推送
           echo "************ docker push end"
