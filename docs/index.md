@@ -58,6 +58,12 @@ The front-end and back-end separation authority management system based on Gin +
 swag init --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
 ```
 
+# Online swag Document
+
+```
+http://localhost:8000/swagger/admin/index.html
+```
+
 # Install
 
 [Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
