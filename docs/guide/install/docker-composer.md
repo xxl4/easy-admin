@@ -15,7 +15,7 @@ version: '3.8'
 services:
   easy-admin:
     container_name: easy-admin
-    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:latest
+    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.0.0
     privileged: true
     restart: always
     ports:
@@ -52,7 +52,7 @@ version: '3.8'
 services:
   easy-admin:
     container_name: easy-admin
-    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:latest
+    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.0.0
     privileged: true
     restart: always
     ports:
@@ -73,10 +73,10 @@ services:
     restart: always
     environment:
       - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=GoAdmin
-      - APP_DB_USER=GoAdmin
-      - APP_DB_PASS=GoAdmin
-      - APP_DB_NAME=GoAdmin
+      - POSTGRES_PASSWORD=easyadmin
+      - APP_DB_USER=easyadmin
+      - APP_DB_PASS=easyadmin
+      - APP_DB_NAME=easyadmin
     volumes:
       - ./db:/docker-entrypoint-initdb.d/
     expod:
@@ -93,13 +93,14 @@ networks:
 
 > You need have setting.yml file in ./config dir
 ```
-docker run --name api-admin -p 8000:8000 -v ./config:/easy-admin/config/ -d registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:latest
+docker-compose up -d // start
+docker-compose down // down
 ```
 
 ### 4、Test it
 
 ```
-docker exec -it api-admin bash 
+docker exec -it easy-admin bash 
 netstat -an | grep 8000
 ```
 
