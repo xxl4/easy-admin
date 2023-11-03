@@ -6,6 +6,8 @@ RUN apk add --no-cache ca-certificates
 RUN apk add --no-cache tzdata
 ENV TZ Asia/Shanghai
 
+WORKDIR /easy-admin
+
 COPY ./easy-admin  /easy-admin
 COPY ./config/settings.demo.yml /config/settings.yml
 EXPOSE 8000
