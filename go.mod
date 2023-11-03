@@ -12,6 +12,7 @@ require (
 	github.com/bytedance/go-tagexpr/v2 v2.9.11
 	github.com/casbin/casbin/v2 v2.77.2
 	github.com/gin-contrib/i18n v1.0.0
+	github.com/gin-gonic/autotls v0.0.5
 	github.com/gin-gonic/gin v1.9.1
 	github.com/google/uuid v1.3.1
 	github.com/huaweicloud/huaweicloud-sdk-go-obs v3.23.9+incompatible
@@ -72,8 +73,7 @@ require (
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.14.1 // indirect
-	github.com/go-redis/redis/v7 v7.3.0 // indirect
-	github.com/go-redis/redis/v9 v9.0.0-rc.1 // indirect
+	github.com/go-redis/redis/v7 v7.4.1 // indirect
 	github.com/go-sql-driver/mysql v1.7.1 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.2 // indirect
@@ -110,15 +110,16 @@ require (
 	github.com/nicelizhi/easy-admin-core/plugins/logger/zap v0.0.0-00010101000000-000000000000 // indirect
 	github.com/nicksnyder/go-i18n/v2 v2.2.1 // indirect
 	github.com/nsqio/go-nsq v1.0.8 // indirect
+	github.com/nxadm/tail v1.4.8 // indirect
 	github.com/nyaruka/phonenumbers v1.0.55 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.9 // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
 	github.com/prometheus/client_model v0.4.1-0.20230718164431-9a2bf3000d16 // indirect
 	github.com/prometheus/common v0.44.0 // indirect
 	github.com/prometheus/procfs v0.11.1 // indirect
-	github.com/redis/go-redis/v9 v9.0.3 // indirect
+	github.com/redis/go-redis/v9 v9.3.0 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230126093431-47fa9a501578 // indirect
-	github.com/robinjoseph08/redisqueue/v2 v2.0.0 // indirect
+	github.com/robinjoseph08/redisqueue/v2 v2.1.0 // indirect
 	github.com/russross/blackfriday/v2 v2.0.1 // indirect
 	github.com/shamsher31/goimgext v1.0.0 // indirect
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
@@ -162,4 +163,5 @@ replace (
 	github.com/nicelizhi/easy-admin-core v0.0.0-00010101000000-000000000000 => ./core
 	github.com/nicelizhi/easy-admin-core/plugins/logger/zap v0.0.0-00010101000000-000000000000 => ./core/plugins/logger/zap
 	github.com/nicelizhi/easy-admin-core/sdk v0.0.0-00010101000000-000000000000 => ./core/sdk
+//github.com/nicelizhi/redisqueue/v2 v2.0.0 => ../redisqueue
 )
