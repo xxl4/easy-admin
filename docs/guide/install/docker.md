@@ -6,7 +6,7 @@
 > tip: [how to install docker](https://nicelizhi.github.io/easy-admin/guide/install/installdocker)
 
 ```
-docker pull registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.0.0 
+docker pull registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.1.0 
 ```
 > view docker images
 ```
@@ -21,7 +21,7 @@ docker images
 
 > You need have setting.yml file in ./config dir
 ```
-docker run --name easy-admin -p 8000:8000 -v ./config:/config/ -d registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.0.0
+docker run --name easy-admin -p 8000:8000 -v ./config:/config/ -d registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.1.0
 ```
 
 ### 4、Test it

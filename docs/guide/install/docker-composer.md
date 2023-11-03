@@ -15,7 +15,7 @@ version: '3.8'
 services:
   easy-admin:
     container_name: easy-admin
-    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.0.0
+    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.1.0
     privileged: true
     restart: always
     ports:
@@ -52,7 +52,7 @@ version: '3.8'
 services:
   easy-admin:
     container_name: easy-admin
-    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.0.0
+    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.1.0
     privileged: true
     restart: always
     ports:
