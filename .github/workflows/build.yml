@@ -66,7 +66,7 @@ jobs:
         run: go mod tidy
 
       - name: Build
-        run: env CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -tags "sqlite3,json1" --ldflags "-extldflags -static" -o main .
+        run: CGO_ENABLED=0 go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o easy-admin .
 
       - name: Build the Docker image and push
         run: |
