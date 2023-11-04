@@ -2,7 +2,7 @@
 > > Build a full-featured administrative interface quickly easy-admin
 
 ### 1、Ready
-> tips: [how to install k8s or k3s]  
+> tips: [how to install k8s or k3s](https://nicelizhi.github.io/easy-admin/guide/install/howtoinstallk8sork3s)
 > tips: [how to delopy mysql on k8s]  
 > tips: [how to delopy pg on k8s]  
 
