@@ -90,5 +90,9 @@ spec:
 
 ### 4、Test it
 
+```
+curl -v http://127.0.0.1:8000
+```
+
 ### Issue Submit
 https://github.com/nicelizhi/easy-admin/issues
