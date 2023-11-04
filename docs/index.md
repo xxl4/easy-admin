@@ -29,7 +29,7 @@
 
 - Multi-command mode
 
-- Multi Language
+- Support Multi Language
 
 - TimeZone Support
 
