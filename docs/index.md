@@ -66,13 +66,13 @@ http://localhost:8000/swagger/admin/index.html
 
 # Install
 
-[Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+[Docker Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/docker)
 
-[Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+[Docker Composer Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
 
-[K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+[K8s Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
 
-[Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+[Binary Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/binary)
 
 
 # Configure
