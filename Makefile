@@ -37,6 +37,7 @@ restart:
 
 start:
 	nohup ./$(PROJECT) server -c=config/settings.dev_steve.yml >> acc.txt &
+	ps aux | grep "$(PROJECT)"
 
 stop:
-	ps aux | grep $(PROJECT) | grep -v grep | awk '{print $2}' | xargs -r kill -9
+	pkill $(PROJECT)
