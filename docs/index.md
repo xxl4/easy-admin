@@ -1,5 +1,5 @@
 
-# Easy Adminn
+# Easy Admin
 [![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
@@ -29,7 +29,7 @@
 
 - Multi-command mode
 
-- Multi Language
+- Support Multi Language
 
 - TimeZone Support
 
@@ -66,13 +66,13 @@ http://localhost:8000/swagger/admin/index.html
 
 # Install
 
-[Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+[Docker Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/docker)
 
-[Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+[Docker Composer Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
 
-[K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+[K8s Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
 
-[Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+[Binary Install Easy-Admin](https://nicelizhi.github.io/easy-admin/guide/install/binary)
 
 
 # Configure
