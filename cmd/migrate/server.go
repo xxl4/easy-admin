@@ -40,7 +40,7 @@ var (
 func init() {
 	StartCmd.PersistentFlags().StringVarP(&configYml, "config", "c", "config/settings.yml", "Start server with provided configuration file")
 	StartCmd.PersistentFlags().BoolVarP(&generate, "generate", "g", false, "generate migration file")
-	StartCmd.PersistentFlags().BoolVarP(&EasyAdmin, "EasyAdmin", "a", false, "generate easy-admin migration file")
+	StartCmd.PersistentFlags().BoolVarP(&EasyAdmin, "EasyAdmin", "e", false, "generate easy-admin migration file")
 	StartCmd.PersistentFlags().StringVarP(&host, "domain", "d", "*", "select tenant host")
 }
 
@@ -48,7 +48,7 @@ func run() {
 
 	if !generate {
 		fmt.Println(`start init`)
-		//1. 读取配置
+		//1. read the config
 		config.Setup(
 			file.NewSource(file.WithPath(configYml)),
 			initDB,
@@ -65,7 +65,7 @@ func migrateModel() error {
 	}
 	db := sdk.Runtime.GetDbByKey(host)
 	if config.DatabasesConfig[host].Driver == "mysql" {
-		//初始化数据库时候用
+		// init db
 		db.Set("gorm:table_options", "ENGINE=InnoDB CHARSET=utf8mb4")
 	}
 	err := db.Debug().AutoMigrate(&models.Migration{})
@@ -77,12 +77,12 @@ func migrateModel() error {
 	return err
 }
 func initDB() {
-	//3. 初始化数据库链接
+	//3. init db
 	database.Setup()
-	//4. 数据库迁移
-	fmt.Println("数据库迁移开始")
+	//4. migrate start
+	fmt.Println("start migrate ")
 	_ = migrateModel()
-	fmt.Println(`数据库基础数据初始化成功`)
+	fmt.Println(`migrate done`)
 }
 
 func genFile() error {
@@ -98,6 +98,9 @@ func genFile() error {
 	}
 	var b1 bytes.Buffer
 	err = t1.Execute(&b1, m)
+	if err != nil {
+		return err
+	}
 	if EasyAdmin {
 		pkg.FileCreate(b1, "./cmd/migrate/migration/version/"+m["GenerateTime"]+"_migrate.go")
 	} else {
