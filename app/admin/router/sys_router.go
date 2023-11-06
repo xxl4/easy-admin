@@ -92,7 +92,7 @@ func sysBaseRouter(r *gin.RouterGroup) {
 	go ws.WebsocketManager.SendAllService()
 
 	if config.ApplicationConfig.Mode != "prod" {
-		r.GET("/", apis.GoAdmin)
+		r.GET("/", apis.EasyAdminStart)
 
 		r.GET("/favicon.ico", apis.Favicon)
 		r.StaticFS("/css", http.FS(CssResource()))
