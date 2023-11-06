@@ -34,7 +34,7 @@ services:
     command: mysqld
     environment:
       - TZ=Asia/Shanghai
-      - MYSQL_ROOT_PASSWORD=GoAdmin
+      - MYSQL_ROOT_PASSWORD=EasyAdmin
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./data:/var/lib/mysql/data
