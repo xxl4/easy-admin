@@ -5,18 +5,13 @@ GOBUILD=$(GOCMD) build
 GOTEST=$(GOCMD) test
 GOCLEAN=$(GOCMD) clean
 GOGET=$(GOCMD) get
-
 LDFLAGS := -s -w
-
 # application name
 PROJECT:=easy-admin
-
 # application version
 VERSION := 1.2.0
-
 # application url
 URL := https://github.com/nicelizhi/easy-admin
-
 
 .PHONY: build
 
