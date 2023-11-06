@@ -1,16 +1,7 @@
 package creatuser
 
-package autocert
-
 import (
-	"net/http"
-
 	"github.com/spf13/cobra"
-
-	"crypto/tls"
-	"fmt"
-
-	"golang.org/x/crypto/acme/autocert"
 )
 
 var (
