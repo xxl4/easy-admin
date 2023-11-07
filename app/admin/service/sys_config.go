@@ -36,7 +36,7 @@ func (e *SysConfig) GetPage(c *dto.SysConfigGetPageReq, list *[]models.SysConfig
 func (e *SysConfig) Get(d *dto.SysConfigGetReq, model *models.SysConfig) error {
 	err := e.Orm.First(model, d.GetId()).Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("Service GetSysConfigPage error:%s", err)
 		return err
 	}

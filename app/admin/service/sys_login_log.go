@@ -41,7 +41,7 @@ func (e *SysLoginLog) Get(d *dto.SysLoginLogGetReq, model *models.SysLoginLog) e
 	db := e.Orm.First(model, d.GetId())
 	err = db.Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("db error:%s", err)
 		return err
 	}
