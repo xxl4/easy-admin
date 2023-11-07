@@ -198,7 +198,7 @@ func (e *SysMenu) Remove(d *dto.SysMenuDeleteReq) *SysMenu {
 		_ = e.AddError(err)
 	}
 	if db.RowsAffected == 0 {
-		err = errors.New("无权删除该数据")
+		err = errors.New("no right to delete this data")
 		_ = e.AddError(err)
 	}
 	return e

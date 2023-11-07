@@ -102,7 +102,7 @@ func (e *SysDictType) Remove(d *dto.SysDictTypeDeleteReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		err = errors.New("无权删除该数据")
+		err = errors.New("no right to delete this data")
 		return err
 	}
 	return nil
