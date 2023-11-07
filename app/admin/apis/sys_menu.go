@@ -48,6 +48,39 @@ func (e SysMenu) GetPage(c *gin.Context) {
 	e.OK(list, ginI18n.MustGetMessage(c, "Query successful"))
 }
 
+// GetPage Menu自定义列表列表数据
+// @Summary Menu列表数据
+// @Description 获取JSON
+// @Tags 菜单
+// @Param menuName query string false "menuName"
+// @Success 200 {object} response.Response "{"code": 200, "data": [...]}"
+// @Router /api/v1/cusmenu [get]
+// @Security Bearer
+func (e SysMenu) CusGetPage(c *gin.Context) {
+	s := service.SysMenu{}
+	req := dto.SysMenuGetPageReq{}
+	err := e.MakeContext(c).
+		MakeOrm().
+		Bind(&req, binding.Form).
+		MakeService(&s.Service).
+		Errors
+	if err != nil {
+		e.Logger.Error(err)
+		e.Error(500, err, err.Error())
+		return
+	}
+	var list = make([]models.SysMenu, 0)
+	err = s.GetPage(&req, &list).Error
+	if err != nil {
+		e.Error(500, err, ginI18n.MustGetMessage(c, "Query failed"))
+		return
+	}
+
+	list2 := make(map[string]interface{}, 0)
+
+	e.OK(list2, ginI18n.MustGetMessage(c, "Query successful"))
+}
+
 // Get 获取菜单详情
 // @Summary Menu详情数据
 // @Description 获取JSON

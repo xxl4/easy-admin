@@ -47,7 +47,7 @@ func (e *SysRole) Get(d *dto.SysRoleGetReq, model *models.SysRole) error {
 	db := e.Orm.First(model, d.GetId())
 	err = db.Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("db error:%s", err)
 		return err
 	}
@@ -317,7 +317,7 @@ func (e *SysRole) GetWithName(d *dto.SysRoleByName, model *models.SysRole) *SysR
 	db := e.Orm.Where("role_name = ?", d.RoleName).First(model)
 	err = db.Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("db error:%s", err)
 		_ = e.AddError(err)
 		return e
