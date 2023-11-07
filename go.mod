@@ -8,7 +8,7 @@ require (
 	github.com/alibaba/sentinel-golang v1.0.4
 	github.com/alibaba/sentinel-golang/pkg/adapters/gin v0.0.0-20220808015021-c5f1f1d055c5
 	github.com/aliyun/aliyun-oss-go-sdk v2.2.9+incompatible
-	github.com/bitly/go-simplejson v0.5.0
+	github.com/bitly/go-simplejson v0.5.1
 	github.com/bytedance/go-tagexpr/v2 v2.9.11
 	github.com/casbin/casbin/v2 v2.77.2
 	github.com/gin-contrib/i18n v1.0.0
@@ -32,7 +32,7 @@ require (
 	github.com/unrolled/secure v1.0.8
 	golang.org/x/crypto v0.14.0
 	golang.org/x/text v0.13.0
-	gorm.io/driver/mysql v1.4.4
+	gorm.io/driver/mysql v1.5.2
 	gorm.io/driver/postgres v1.5.3
 	gorm.io/driver/sqlite v1.5.4
 	gorm.io/driver/sqlserver v1.4.1
@@ -110,7 +110,7 @@ require (
 	github.com/mojocn/base64Captcha v1.3.1 // indirect
 	github.com/nicelizhi/easy-admin-core/plugins/logger/zap v0.0.0-00010101000000-000000000000 // indirect
 	github.com/nicksnyder/go-i18n/v2 v2.2.1 // indirect
-	github.com/nsqio/go-nsq v1.0.8 // indirect
+	github.com/nsqio/go-nsq v1.1.0 // indirect
 	github.com/nyaruka/phonenumbers v1.0.55 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.9 // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
@@ -152,7 +152,7 @@ require (
 	gopkg.in/kyokomi/emoji.v1 v1.5.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	gorm.io/plugin/dbresolver v1.3.0 // indirect
+	gorm.io/plugin/dbresolver v1.4.7 // indirect
 	modernc.org/libc v1.22.2 // indirect
 	modernc.org/mathutil v1.5.0 // indirect
 	modernc.org/memory v1.5.0 // indirect
