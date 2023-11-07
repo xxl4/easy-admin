@@ -84,7 +84,7 @@ func (e *SysDictType) Update(c *dto.SysDictTypeUpdateReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 
 	}
 	return nil
@@ -102,7 +102,7 @@ func (e *SysDictType) Remove(d *dto.SysDictTypeDeleteReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		err = errors.New("无权删除该数据")
+		err = errors.New("no right to delete this data")
 		return err
 	}
 	return nil

@@ -37,6 +37,7 @@ require (
 	gorm.io/driver/sqlite v1.5.4
 	gorm.io/driver/sqlserver v1.4.1
 	gorm.io/gorm v1.25.5
+	gorm.io/plugin/soft_delete v1.2.1
 )
 
 require (
@@ -110,7 +111,6 @@ require (
 	github.com/nicelizhi/easy-admin-core/plugins/logger/zap v0.0.0-00010101000000-000000000000 // indirect
 	github.com/nicksnyder/go-i18n/v2 v2.2.1 // indirect
 	github.com/nsqio/go-nsq v1.0.8 // indirect
-	github.com/nxadm/tail v1.4.8 // indirect
 	github.com/nyaruka/phonenumbers v1.0.55 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.9 // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect

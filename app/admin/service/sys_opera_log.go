@@ -78,7 +78,7 @@ func (e *SysOperaLog) Remove(d *dto.SysOperaLogDeleteReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权删除该数据")
+		return errors.New("no right to delete this data")
 	}
 	return nil
 }

@@ -81,7 +81,7 @@ func (e *SysPost) Update(c *dto.SysPostUpdateReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 
 	}
 	return nil
@@ -99,7 +99,7 @@ func (e *SysPost) Remove(d *dto.SysPostDeleteReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		err = errors.New("无权删除该数据")
+		err = errors.New("no right to delete this data")
 		return err
 	}
 	return nil

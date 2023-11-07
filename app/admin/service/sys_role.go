@@ -162,7 +162,7 @@ func (e *SysRole) Update(c *dto.SysRoleUpdateReq, cb *casbin.SyncedEnforcer) err
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 
 	// 清除 sys_casbin_rule 权限表里 当前角色的所有记录
@@ -218,7 +218,7 @@ func (e *SysRole) Remove(c *dto.SysRoleDeleteReq, cb *casbin.SyncedEnforcer) err
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 
 	// 清除 sys_casbin_rule 权限表里 当前角色的所有记录
@@ -276,7 +276,7 @@ func (e *SysRole) UpdateDataScope(c *dto.RoleDataScopeReq) *SysRole {
 		return e
 	}
 	if db.RowsAffected == 0 {
-		_ = e.AddError(errors.New("无权更新该数据"))
+		_ = e.AddError(errors.New("do not have permission to update this data"))
 		return e
 	}
 	return e
@@ -306,7 +306,7 @@ func (e *SysRole) UpdateStatus(c *dto.UpdateStatusReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 	return nil
 }
