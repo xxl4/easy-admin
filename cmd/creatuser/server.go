@@ -49,6 +49,7 @@ func run() error {
 	//var defaultpass = "admin"
 
 	row := db.Debug().Where("username = ?", username).First(&model)
+
 	if row.Error != nil {
 		fmt.Println(row.Error)
 		return nil

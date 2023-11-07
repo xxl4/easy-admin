@@ -81,7 +81,7 @@ func (e *SysPost) Update(c *dto.SysPostUpdateReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 
 	}
 	return nil

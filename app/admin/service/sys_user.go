@@ -97,7 +97,7 @@ func (e *SysUser) Update(c *dto.SysUserUpdateReq, p *actions.DataPermission) err
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 
 	}
 	c.Generate(&model)
@@ -126,7 +126,7 @@ func (e *SysUser) UpdateAvatar(c *dto.UpdateSysUserAvatarReq, p *actions.DataPer
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 
 	}
 	err = e.Orm.Table(model.TableName()).Where("user_id =? ", c.UserId).Updates(c).Error
@@ -149,7 +149,7 @@ func (e *SysUser) UpdateStatus(c *dto.UpdateSysUserStatusReq, p *actions.DataPer
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("don not have permission to update this data")
 
 	}
 	err = e.Orm.Table(model.TableName()).Where("user_id =? ", c.UserId).Updates(c).Error
@@ -172,7 +172,7 @@ func (e *SysUser) ResetPwd(c *dto.ResetSysUserPwdReq, p *actions.DataPermission)
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 	c.Generate(&model)
 	err = e.Orm.Omit("username", "nick_name", "phone", "role_id", "avatar", "sex").Save(&model).Error
@@ -218,7 +218,7 @@ func (e *SysUser) UpdatePwd(id int, oldPassword, newPassword string, p *actions.
 		First(c, id).Error
 	if err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
-			return errors.New("无权更新该数据")
+			return errors.New("do not have permission to update this data")
 		}
 		e.Log.Errorf("db error: %s", err)
 		return err

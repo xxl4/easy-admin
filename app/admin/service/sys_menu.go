@@ -174,7 +174,7 @@ func (e *SysMenu) Update(c *dto.SysMenuUpdateReq) *SysMenu {
 		return e
 	}
 	if db.RowsAffected == 0 {
-		_ = e.AddError(errors.New("无权更新该数据"))
+		_ = e.AddError(errors.New("do not have permission to update this data"))
 		return e
 	}
 	var menuList []models.SysMenu

@@ -52,7 +52,7 @@ func UpdateAction(control dto.Control) gin.HandlerFunc {
 			return
 		}
 		if db.RowsAffected == 0 {
-			response.Error(c, http.StatusForbidden, nil, ginI18n.MustGetMessage(c, "Don not have permission to update this data"))
+			response.Error(c, http.StatusForbidden, nil, ginI18n.MustGetMessage(c, "do not have permission to update this data"))
 			return
 		}
 		response.OK(c, object.GetId(), ginI18n.MustGetMessage(c, "Update completed"))

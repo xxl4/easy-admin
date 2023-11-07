@@ -79,7 +79,7 @@ func (e *SysApi) Update(c *dto.SysApiUpdateReq, p *actions.DataPermission) error
 	var model = models.SysApi{}
 	db := e.Orm.Debug().First(&model, c.GetId())
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 	c.Generate(&model)
 	db = e.Orm.Save(&model)
