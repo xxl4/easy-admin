@@ -47,7 +47,7 @@ func (e *SysRole) Get(d *dto.SysRoleGetReq, model *models.SysRole) error {
 	db := e.Orm.First(model, d.GetId())
 	err = db.Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("db error:%s", err)
 		return err
 	}
@@ -162,7 +162,7 @@ func (e *SysRole) Update(c *dto.SysRoleUpdateReq, cb *casbin.SyncedEnforcer) err
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 
 	// 清除 sys_casbin_rule 权限表里 当前角色的所有记录
@@ -218,7 +218,7 @@ func (e *SysRole) Remove(c *dto.SysRoleDeleteReq, cb *casbin.SyncedEnforcer) err
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 
 	// 清除 sys_casbin_rule 权限表里 当前角色的所有记录
@@ -276,7 +276,7 @@ func (e *SysRole) UpdateDataScope(c *dto.RoleDataScopeReq) *SysRole {
 		return e
 	}
 	if db.RowsAffected == 0 {
-		_ = e.AddError(errors.New("无权更新该数据"))
+		_ = e.AddError(errors.New("do not have permission to update this data"))
 		return e
 	}
 	return e
@@ -306,7 +306,7 @@ func (e *SysRole) UpdateStatus(c *dto.UpdateStatusReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 	return nil
 }
@@ -317,7 +317,7 @@ func (e *SysRole) GetWithName(d *dto.SysRoleByName, model *models.SysRole) *SysR
 	db := e.Orm.Where("role_name = ?", d.RoleName).First(model)
 	err = db.Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("db error:%s", err)
 		_ = e.AddError(err)
 		return e

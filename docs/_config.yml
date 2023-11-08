@@ -18,6 +18,9 @@ site:
   pages: []
 gist:
   noscript: false
+github:
+  source:
+    branch: main
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge

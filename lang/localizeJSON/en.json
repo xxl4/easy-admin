@@ -17,7 +17,7 @@
     "Database connection acquisition failed": "Database connection acquistion Failed",
     "Model generation failed": "Model Generation Failed",
     "No right to delete this data": "No Right To Delete this data",
-    "Don not have permission to update this data": "Don't have permission to Update this Data",
+    "do not have permission to update this data": "Don't have permission to Update this Data",
     "View failed": "View Failed!",
     "The object being viewed does not exist or does not have permission to view it": "The Object being viewed does not exist or does not have permission to view",
     "Sorry code generation is not supported for sqlite3 or postgres": "Sorrty，sqlite3 Or postgres don't Support code generation",

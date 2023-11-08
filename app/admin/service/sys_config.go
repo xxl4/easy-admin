@@ -36,7 +36,7 @@ func (e *SysConfig) GetPage(c *dto.SysConfigGetPageReq, list *[]models.SysConfig
 func (e *SysConfig) Get(d *dto.SysConfigGetReq, model *models.SysConfig) error {
 	err := e.Orm.First(model, d.GetId()).Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("Service GetSysConfigPage error:%s", err)
 		return err
 	}
@@ -73,7 +73,7 @@ func (e *SysConfig) Update(c *dto.SysConfigControl) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 
 	}
 	return nil
@@ -94,7 +94,7 @@ func (e *SysConfig) SetSysConfig(c *[]dto.GetSetSysConfigReq) error {
 				return err
 			}
 			if db.RowsAffected == 0 {
-				return errors.New("无权更新该数据")
+				return errors.New("do not have permission to update this data")
 			}
 		}
 	}
@@ -149,7 +149,7 @@ func (e *SysConfig) Remove(d *dto.SysConfigDeleteReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		err = errors.New("无权删除该数据")
+		err = errors.New("no right to delete this data")
 		return err
 	}
 	return nil
