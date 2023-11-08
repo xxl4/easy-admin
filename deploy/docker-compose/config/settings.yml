@@ -1,0 +1,114 @@
+settings:
+  application:
+    # dev test prod
+    mode: prod
+    # 服务器ip，默认使用 0.0.0.0
+    host: 176.17.0.1
+    # 服务名称
+    name: easy-admin
+    # 端口号
+    port: 8000 # 服务端口号
+    readtimeout: 1
+    writertimeout: 2
+    # 数据权限功能开关
+    enabledp: false
+    # 时区
+    timezone: "Africa/Cairo"
+    # 区域
+    local: ""
+  ssl:
+    # https domain
+    domain: localhost:8000
+    # https enable
+    enable: false
+    # ssl key
+    key: '-----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEAsMQENN7PiyO4mben0zAy37M9HMzOFft0LQL+7i78QMNEJgRc
+CQPghxmHsuKYC48Ien3yrL2vvsc93VcsBYsgP2RcfP5Wzmn+90BFbjWA62WT0p7d
+RdzTc/QFz27vxyZEuOgu2Xr0FMzD3a7EKi4QaNif8xqtws3d218QIRmM+eKFBfFl
+QeeFn/Yjao3Sx95qOv6raIlfqHmBAbAozhGT7ZiUNRLoE7ZizTEqX0la9dZfEQWb
+vlWXgm1wHWWLsoCM+n1s72e8Q34MSmzHcjxOcYbD9pg3NilbN4Krpqgf6wW42Gr3
+4cDQsJc7+7ndK2+T6HxGoY514/SMpOgb++qpnwIDAQABAoIBAAuH60BUV+nwiBka
+9msxOzha4GiHDFs5voU11fx3+y5HA/njkeoSoyxyTrxYH2lYSMojeiz+PhSDZHaS
+ZQWYOEp6WQrcVTxSL3bgmJw3svO9ehb6FF7Q03MTyZHpCjeNuFuZkH4mZlK5stM8
+vyuDOsB5f8xOLWSbpQErook45KM49tdbH0lf7C2/lH4pe1C3Tnd7wClS6S4xD9Qe
+oz0x3sM7HeHtQzQiXkh/iLlzLMQp4enpgsr0U/ubRZ9hcwvF8F/XggPdHiQq9QKc
+8nLBI+LpWLjnM2V8AX+H3SHyhVOKnYLJIgBKZavtdETe4YEtXbDMmsNgbeeMR2hx
+JhIuI9UCgYEA76Zc8ioKazyd7RG8wQmdTHAkxkrGd6ywZa7nA8dRhr4o/bRaghYP
+jcWdc81+xff8l+Up4VdPuCPMW4N8+3ccVnp++PlOPaPY9A4tPUxqhR5qDViHWCW1
++K0ETendPdRS9yJwUMOgoSgPd7mzv5bkPH/xTmPjE8QrMKReMzar2SMCgYEAvNNX
+aaHbMZTj7fJXpH+7SsFjECLWP1VXth/E9iE9qe/cGttFbfspjoIS7SbXJ2tp2zlE
+ILsMXQXzWlK510Riauih75UvR+pcMv9xII5WASuYzt/HlFJx8ua1TAOcuoswkBsK
+BmR4wGKg2Enb+huA0gEUzSXa+LxIpgBdm1M1u1UCgYBRS8ZMACb4qd+JBHNbqL9L
+pt9SxRr+jf5pACQuC/eEFg4hwoTRjFpKZbc8CYHv9mghvwOuBchtVveEM966D3X1
+gCiCnVAFaQe4AvclzD52WhLv5BBFvsU0Tr0fES6UQurCG1SukS50fPqCSuTHIZDb
+VSuuxAPMOMfOAHRUOz+gsQKBgA8zhGoAmcDYF7FkPSIFFnLiNrNp2o2mtTT4Qcb+
+zhQMN1ACLwi3m5TZa+Sjp9aIkzEO3ykzZb9nZzvyRPvLiZDJwZ+kBvZnK5z/a4AP
+dWUKuXaOFWcfbAT+BcJk2A08f2BajOgO1pnGVuSSrZ7o7+n4JFCPp502qzKR/Pcw
+L7cxAoGBAJLpmo6C+ipBUAUDoM4L2kJw0PL2v1omItErzYw7H+JSvda60GxiG8WB
+XvBOvTc32ZWMjU88A/ssI+yZWSXMprmc2b6aH2N71M+tYCEyWGwJcFH6/TjN5/fW
+im7YwEal3+NRXRdW6Gz8OjIakv0FV7MiCZEuDELAi5O6VvuvjuED
+-----END RSA PRIVATE KEY-----'
+    # ssl pem path
+    pem: temp/fullchain.pem
+  logger:
+    # 日志存放路径
+    path: temp/logs
+    # 日志输出，file：文件，default：命令行，其他：命令行
+    stdout: '' #控制台日志，启用后，不输出到文件
+    # 日志等级, trace, debug, info, warn, error, fatal
+    level: trace
+    # 数据库日志开关
+    enableddb: false
+  jwt:
+    # token 密钥，生产环境时及的修改
+    secret: easy-admin
+    # token 过期时间 单位：秒
+    timeout: 3600
+  database:
+    # 数据库类型 mysql, sqlite3, postgres, sqlserver
+    # sqlserver: sqlserver://用户名:密码@地址?database=数据库名
+    driver: mysql
+    # 数据库连接字符串 mysql 缺省信息 charset=utf8&parseTime=True&loc=Local&timeout=1000ms
+    source: easyadmin:easyadmin123@tcp(176.7.0.2:3306)/easy_admin?charset=utf8&parseTime=True&loc=Local&timeout=1000ms
+#  databases:
+#    'locaohost:8000':
+#      driver: mysql
+#        # 数据库连接字符串 mysql 缺省信息 charset=utf8&parseTime=True&loc=Local&timeout=1000ms
+#        source: user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8&parseTime=True&loc=Local&timeout=1000ms
+#      registers:
+#        - sources:
+#            - user:password@tcp(127.0.0.1:3306)/dbname?charset=utf8&parseTime=True&loc=Local&timeout=1000ms
+  gen:
+    # 代码生成读取的数据库名称
+    dbname: easy_admin
+    # 代码生成是使用前端代码存放位置，需要指定到src文件夹，相对路径
+    frontpath: ../ui/src
+  extend: # 扩展项使用说明
+    demo:
+      name: data
+  cache:
+    redis:
+      addr: 176.7.0.3:6379
+      password: 
+      db: 1
+    # key存在即可
+    memory: '' 
+  queue:
+    memory:
+      poolSize: 100
+    redis:
+      addr: 176.7.0.3:6379
+      password: 
+      db: 3
+      producer:
+        streamMaxLength: 100
+        approximateMaxLength: true
+      consumer:
+        visibilityTimeout: 60
+        bufferSize: 100
+        concurrency: 10
+        blockingTimeout: 5
+        reclaimInterval: 1
+  locker:
+    redis:
