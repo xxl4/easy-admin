@@ -11,40 +11,74 @@ https://docs.docker.com/compose/install/
 
 > 1.2、docker-compose.yaml (MySQL Version)
 ```
-version: '3.8'
+version: "3.7"
+
+networks:
+  easy-admin-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: '176.7.0.0/16'
+        
+volumes:
+  mysql:
+  redis:
+  
 services:
-  easy-admin:
-    container_name: easy-admin
-    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.1.0
-    privileged: true
+  server:
+    image: nicesteven/easy-admin
     restart: always
     ports:
-      - 8000:8000
-    volumes:
-      - ./config/:/easy-admin/config/
-      - ./static/:/easy-admin/static/
-      - ./temp/:/easy-admin/temp/
+      - '8000:8000'
+    depends_on:
+      - mysql
+      - redis
+    links:
+      - mysql
+      - redis
     networks:
-      - kuops
+      easy-admin-network:
+        ipv4_address: 176.7.0.1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-X GET", "http://176.7.0.1:8080/api/v1/getinfo"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    command:
+      /easy-admin server -c=/config/settings.yml
+
   mysql:
+    image: mysql:8.0.21
     container_name: mysql
-    image: mysql:5.7.26
-    hostname: mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     restart: always
-    command: mysqld
-    environment:
-      - TZ=Asia/Shanghai
-      - MYSQL_ROOT_PASSWORD=GoAdmin
+    ports:
+      - "13306:3306"
     volumes:
+      - $PWD/mysql_data/:/var/lib/mysql:rw
+      - $PWD/mysql_init/:/docker-entrypoint-initdb.d/:rw
+      - $PWD/config/:/config/
       - /etc/localtime:/etc/localtime:ro
-      - ./data:/var/lib/mysql/data
-      - ./data/my.cnf:/etc/mysql/my.cnf
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     networks:
-      - kuops
-networks:
-  kuops:
-    driver: bridge
+      easy-admin-network:
+        ipv4_address: 176.7.0.2
+
+  redis:
+    image: redis:6.0.6
+    container_name: redis
+    restart: always
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: "yes"
+    volumes:
+      - redis:/data
+    networks:
+      easy-admin-network:
+        ipv4_address: 176.7.0.3
 ```
+> docker-composer.yml from https://github.com/nicelizhi/easy-admin/tree/main/deploy/docker-compose
 
 > 1.3、docker-compose.yaml (PG Version) (Option)
 ```
@@ -52,7 +86,7 @@ version: '3.8'
 services:
   easy-admin:
     container_name: easy-admin
-    image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.1.0
+    image: nicesteven/easy-admin
     privileged: true
     restart: always
     ports:
