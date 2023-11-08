@@ -43,7 +43,7 @@ func (e *SysDictType) Get(d *dto.SysDictTypeGetReq, model *models.SysDictType) e
 	db := e.Orm.First(model, d.GetId())
 	err = db.Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("db error: %s", err)
 		return err
 	}
@@ -84,7 +84,7 @@ func (e *SysDictType) Update(c *dto.SysDictTypeUpdateReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 
 	}
 	return nil
@@ -102,7 +102,7 @@ func (e *SysDictType) Remove(d *dto.SysDictTypeDeleteReq) error {
 		return err
 	}
 	if db.RowsAffected == 0 {
-		err = errors.New("无权删除该数据")
+		err = errors.New("no right to delete this data")
 		return err
 	}
 	return nil

@@ -9,6 +9,7 @@ import (
 
 	"github.com/nicelizhi/easy-admin/cmd/app"
 	"github.com/nicelizhi/easy-admin/cmd/autocert"
+	"github.com/nicelizhi/easy-admin/cmd/creatuser"
 	"github.com/nicelizhi/easy-admin/common/global"
 
 	"github.com/spf13/cobra"
@@ -18,6 +19,7 @@ import (
 	"github.com/nicelizhi/easy-admin/cmd/version"
 )
 
+// @link https://github.com/spf13/cobra/blob/main/site/content/user_guide.md
 var rootCmd = &cobra.Command{
 	Use:          "easy-admin",
 	Short:        "easy-admin",
@@ -47,6 +49,7 @@ func init() {
 	rootCmd.AddCommand(version.StartCmd)
 	rootCmd.AddCommand(app.StartCmd)
 	rootCmd.AddCommand(autocert.StartCmd)
+	rootCmd.AddCommand(creatuser.StartCmd)
 }
 
 // Execute : apply commands

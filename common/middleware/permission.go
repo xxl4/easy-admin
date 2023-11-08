@@ -23,7 +23,6 @@ func AuthCheckRole() gin.HandlerFunc {
 		e := sdk.Runtime.GetCasbinKey(c.Request.Host)
 		var res, casbinExclude bool
 		var err error
-		//检查权限
 		if v["rolekey"] == "admin" {
 			res = true
 			c.Next()
@@ -54,8 +53,7 @@ func AuthCheckRole() gin.HandlerFunc {
 			log.Warnf("isTrue: %v role: %s method: %s path: %s message: %s", res, v["rolekey"], c.Request.Method, c.Request.URL.Path, ginI18n.MustGetMessage(c, "The current request does not have permission please check by the administrator"))
 			c.JSON(http.StatusOK, gin.H{
 				"code": 403,
-				//"msg":  "对不起，您没有该接口访问权限，请联系管理员",
-				"msg": ginI18n.MustGetMessage(c, "Sorry you do not have access to this interface, contact your administrator"),
+				"msg":  ginI18n.MustGetMessage(c, "Sorry you do not have access to this interface, contact your administrator"),
 			})
 			c.Abort()
 			return

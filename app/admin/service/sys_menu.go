@@ -68,7 +68,7 @@ func (e *SysMenu) Get(d *dto.SysMenuGetReq, model *models.SysMenu) *SysMenu {
 		First(model, d.GetId())
 	err = db.Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("GetSysMenu error:%s", err)
 		_ = e.AddError(err)
 		return e
@@ -174,7 +174,7 @@ func (e *SysMenu) Update(c *dto.SysMenuUpdateReq) *SysMenu {
 		return e
 	}
 	if db.RowsAffected == 0 {
-		_ = e.AddError(errors.New("无权更新该数据"))
+		_ = e.AddError(errors.New("do not have permission to update this data"))
 		return e
 	}
 	var menuList []models.SysMenu
@@ -198,7 +198,7 @@ func (e *SysMenu) Remove(d *dto.SysMenuDeleteReq) *SysMenu {
 		_ = e.AddError(err)
 	}
 	if db.RowsAffected == 0 {
-		err = errors.New("无权删除该数据")
+		err = errors.New("no right to delete this data")
 		_ = e.AddError(err)
 	}
 	return e
@@ -397,7 +397,7 @@ func (e *SysMenu) getByRoleName(roleName string) ([]models.SysMenu, error) {
 	data := make([]models.SysMenu, 0)
 
 	if roleName == "admin" {
-		err = e.Orm.Where(" menu_type in ('M','C') and deleted_at is null").
+		err = e.Orm.Where(" menu_type in ('M','C') and deleted_at = 0").
 			Order("sort").
 			Find(&data).
 			Error
