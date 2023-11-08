@@ -85,7 +85,7 @@ func (e *{{.ClassName}}) Update(c *dto.{{.ClassName}}UpdateReq, p *actions.DataP
         return err
     }
     if db.RowsAffected == 0 {
-        return errors.New("无权更新该数据")
+        return errors.New("do not have permission to update this data")
     }
     return nil
 }
@@ -103,7 +103,7 @@ func (e *{{.ClassName}}) Remove(d *dto.{{.ClassName}}DeleteReq, p *actions.DataP
         return err
     }
     if db.RowsAffected == 0 {
-        return errors.New("无权删除该数据")
+        return errors.New("no right to delete this data")
     }
 	return nil
 }
