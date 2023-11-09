@@ -38,6 +38,8 @@ Easyadmin is a Quick, beautiful and modern admin gererator for Go VUE applicatio
 
 - Multi Language
 
+- Multi-platform (Darwin Freebsd Linux Windows)
+
 - TimeZone Support
 
 
