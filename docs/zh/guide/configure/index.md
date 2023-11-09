@@ -1,7 +1,7 @@
-# Easy Admin Configure
-> [View Online Config file](https://github.com/nicelizhi/easy-admin/blob/main/config/settings.full.yml)  
+# Easy Admin 配置
+> [查看最新在线配置文件](https://github.com/nicelizhi/easy-admin/blob/main/config/settings.full.yml)  
 
-English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/guide/configure/)
+[English](https://nicelizhi.github.io/easy-admin/guide/configure/) | 简体中文
 ```
 settings:
   application:
