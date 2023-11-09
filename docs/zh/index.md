@@ -1,12 +1,15 @@
 # easy-admin
-
-
+[![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/nicelizhi/easy-admin)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
+[![HitCount](https://views.whatilearened.today/views/github/nicelizhi/easy-admin.svg)](https://github.com/nicelizhi/easy-admin)
+[![License](https://img.shields.io/github/license/nicelizhi/easy-admin
+)](https://github.com/nicelizhi/easy-admin)
+[![Commits](https://img.shields.io/github/commit-activity/m/nicelizhi/easy-admin?color=ffff00)](https://github.com/nicelizhi/easy-admin/commits/main)
 
-[English](https://github.com/nicelizhi/easy-admin/blob/master/README.md) | 简体中文
+[English](https://nicelizhi.github.io/easy-admin/) | 简体中文
 
-基于Gin + Vue + Element UI OR Arco Design OR Ant Design的前后端分离权限管理系统,系统初始化极度简单，只需要配置文件中，修改数据库连接，系统支持多指令操作，迁移指令可以让初始化数据库信息变得更简单，服务指令可以很简单的启动api服务
+基于Gin + Arco Design的前后端分离权限管理系统,系统初始化极度简单.实现了Docker,docker-compose,二进制下载安装，K8S 部署方式。完美的实现了静态文件打包到GO中，很好的简化用户的使用体验。
 
 
 ## ✨ 特性
@@ -37,7 +40,7 @@
 
 - 时区功能支持
 
-- TODO: 单元测试
+- 多平台支持，多CPU架构支持。
 
 
 ## 🎁 内置
@@ -52,10 +55,9 @@
 7. 参数管理：对系统动态配置常用参数。
 8. 操作日志：系统正常操作日志记录和查询；系统异常信息日志记录和查询。
 9. 登录日志：系统登录日志记录查询包含登录异常。
-1. 接口文档：根据业务代码自动生成相关的api接口文档。
+1. 接口文档：根据业务代码自动生成相关的接口文档。
 1. 代码生成：根据数据表结构生成对应的增删改查相对应业务，全程可视化操作，让基本业务可以零代码实现。
 1. 表单构建：自定义页面样式，拖拉拽实现页面布局。
 1. 服务监控：查看一些服务器的基本信息。
-1. 内容管理：demo功能，下设分类管理、内容管理。可以参考使用方便快速入门。
 1. 定时任务：自动化任务，目前支持接口调用和函数调用。
 
