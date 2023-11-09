@@ -18,11 +18,11 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
 
-## online demo
+## Online demo
 - [Vue2 demo](https://easy-admin-ui.vercel.app)  
 - [Arco demo](https://hello-arco-pro.vercel.app/)( testing now)  
 
-## ✨ Feature
+##  Feature
 
 - Follow RESTful API design specifications
 
@@ -49,7 +49,7 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 - TimeZone Support
 
 
-## 🎁 Internal
+## Internal
 
 1. User management: The user is the system operator, this function mainly completes the system user configuration.
 2. Department management: configure the system organization (company, department, group), and display the tree structure to support data permissions.
