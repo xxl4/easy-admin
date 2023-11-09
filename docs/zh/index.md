@@ -24,7 +24,7 @@
 
 - 支持 Swagger 文档(基于swaggo)
 
-- 基于 GORM 的数据库存储，可扩展多种类型数据库
+- 基于 GORM 的数据库存储，可扩展多种类型数据库, 现支持 MySQL, PostgreSQL, SQlite, SQL Server, Tidb
 
 - 配置文件简单的模型映射，快速能够得到想要的配置
 
