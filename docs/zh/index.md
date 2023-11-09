@@ -61,3 +61,31 @@
 1. 服务监控：查看一些服务器的基本信息。
 1. 定时任务：自动化任务，目前支持接口调用和函数调用。
 
+# 安装
+
+- [Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+
+- [Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+
+- [K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+
+- [Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+
+
+# 配置
+
+[Configure Docs](https://nicelizhi.github.io/easy-admin/guide/configure/)
+
+# 在线文档
+[https://nicelizhi.github.io/easy-admin/](https://nicelizhi.github.io/easy-admin/) 
+
+# Issue
+[https://github.com/nicelizhi/easy-admin/issues](https://github.com/nicelizhi/easy-admin/issues)   
+[https://gitee.com/nicelizhi/easy-admin/issues](https://gitee.com/nicelizhi/easy-admin/issues)  (中国)
+
+# Discussions
+[https://github.com/nicelizhi/easy-admin/discussions](https://github.com/nicelizhi/easy-admin/discussions) 
+
+
+
+
