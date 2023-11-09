@@ -53,7 +53,7 @@ jobs:
         run: cd ./ui/ && npm install --legacy-peer-deps
       
       - name : npm build
-        run: cd ./ui/ && npm run build:prod --legacy-peer-deps
+        run: cd ./ui/ && npm run build:prod:base --legacy-peer-deps
       
       - name: Set up Go ${{ matrix.go-version }}
         uses: actions/setup-go@v4
