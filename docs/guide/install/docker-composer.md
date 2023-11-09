@@ -53,8 +53,6 @@ services:
     container_name: mysql
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     restart: always
-    ports:
-      - "13306:3306"
     volumes:
       - $PWD/mysql_data/:/var/lib/mysql:rw
       - $PWD/mysql_init/:/docker-entrypoint-initdb.d/:rw

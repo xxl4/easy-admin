@@ -3,30 +3,32 @@ package models
 import (
 	"time"
 
-	"gorm.io/gorm"
+	"gorm.io/plugin/soft_delete"
 )
 
+// create and update by user
 type ControlBy struct {
-	CreateBy int `json:"createBy" gorm:"index;comment:创建者"`
-	UpdateBy int `json:"updateBy" gorm:"index;comment:更新者"`
+	CreateBy int `json:"createBy" gorm:"index;comment:create user"`
+	UpdateBy int `json:"updateBy" gorm:"index;comment:update user"`
 }
 
-// SetCreateBy 设置创建人id
+// SetCreateBy creater id
 func (e *ControlBy) SetCreateBy(createBy int) {
 	e.CreateBy = createBy
 }
 
-// SetUpdateBy 设置修改人id
+// SetUpdateBy edit id
 func (e *ControlBy) SetUpdateBy(updateBy int) {
 	e.UpdateBy = updateBy
 }
 
 type Model struct {
-	Id int `json:"id" gorm:"primaryKey;autoIncrement;comment:主键编码"`
+	Id int `json:"id" gorm:"primaryKey;autoIncrement;comment:key"`
 }
 
+// Org model Time and delete flag
 type ModelTime struct {
-	CreatedAt time.Time      `json:"createdAt" gorm:"comment:创建时间"`
-	UpdatedAt time.Time      `json:"updatedAt" gorm:"comment:最后更新时间"`
-	DeletedAt gorm.DeletedAt `json:"-" gorm:"index;comment:删除时间"`
+	CreatedAt time.Time             `json:"createdAt" gorm:"comment:create date"`
+	UpdatedAt time.Time             `json:"updatedAt" gorm:"comment:update date"`
+	DeletedAt soft_delete.DeletedAt `json:"-" gorm:"index;comment:flag"`
 }

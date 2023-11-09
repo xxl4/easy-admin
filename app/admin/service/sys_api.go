@@ -61,7 +61,7 @@ func (e *SysApi) Get(d *dto.SysApiGetReq, p *actions.DataPermission, model *mode
 		).
 		First(model, d.GetId()).Error
 	if err != nil && errors.Is(err, gorm.ErrRecordNotFound) {
-		err = errors.New("查看对象不存在或无权查看")
+		err = errors.New("the object being viewed does not exist or does not have permission to view it")
 		e.Log.Errorf("Service GetSysApi error:%s", err)
 		_ = e.AddError(err)
 		return e
@@ -79,7 +79,7 @@ func (e *SysApi) Update(c *dto.SysApiUpdateReq, p *actions.DataPermission) error
 	var model = models.SysApi{}
 	db := e.Orm.Debug().First(&model, c.GetId())
 	if db.RowsAffected == 0 {
-		return errors.New("无权更新该数据")
+		return errors.New("do not have permission to update this data")
 	}
 	c.Generate(&model)
 	db = e.Orm.Save(&model)
@@ -104,7 +104,7 @@ func (e *SysApi) Remove(d *dto.SysApiDeleteReq, p *actions.DataPermission) error
 		return err
 	}
 	if db.RowsAffected == 0 {
-		return errors.New("无权删除该数据")
+		return errors.New("no right to delete this data")
 	}
 	return nil
 }
