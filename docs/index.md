@@ -1,10 +1,17 @@
 
 # easy-admin
+
 [![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
+[![HitCount](https://views.whatilearened.today/views/github/nicelizhi/easy-admin.svg)](https://github.com/nicelizhi/easy-admin)
 [![License](https://img.shields.io/github/license/nicelizhi/easy-admin
 )](https://github.com/nicelizhi/easy-admin)
+[![Commits](https://img.shields.io/github/commit-activity/m/nicelizhi/easy-admin?color=ffff00)](https://github.com/nicelizhi/easy-admin/commits/main)
+
+## About Easy-Admin
+
+Easyadmin is a Quick, beautiful and modern admin gererator for Go VUE application.
 
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
@@ -30,6 +37,8 @@
 - Multi-command mode
 
 - Multi Language
+
+- Multi-platform (Darwin Freebsd Linux Windows)
 
 - TimeZone Support
 
@@ -65,13 +74,13 @@ http://localhost:8000/swagger/admin/index.html
 
 # Install
 
-[Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+- [Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
 
-[Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+- [Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
 
-[K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+- [K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
 
-[Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+- [Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
 
 
 # Configure
