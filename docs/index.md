@@ -9,9 +9,13 @@
 )](https://github.com/nicelizhi/easy-admin)
 [![Commits](https://img.shields.io/github/commit-activity/m/nicelizhi/easy-admin?color=ffff00)](https://github.com/nicelizhi/easy-admin/commits/main)
 
+English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
+
 ## About Easy-Admin
 
 Easyadmin is a Quick, beautiful and modern admin gererator for Go VUE application.
+
+
 
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.

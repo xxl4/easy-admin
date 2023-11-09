@@ -9,7 +9,10 @@
 
 [English](https://nicelizhi.github.io/easy-admin/) | 简体中文
 
-基于Gin + Arco Design的前后端分离权限管理系统,系统初始化极度简单.实现了Docker,docker-compose,二进制下载安装，K8S 部署方式。完美的实现了静态文件打包到GO中，很好的简化用户的使用体验。
+## 关于 Easy Admin
+> 由于自己在具体的业务场景中，经常是会需要管理后台的来维护对应的业务系统，从而就有了这么一个想法，通过提供基础的管理后台系统的方式，方便大家可以免费使用。
+
+> 基于Gin + Arco Design的前后端分离权限管理系统,系统初始化极度简单.实现了Docker,docker-compose,二进制下载安装，K8S 部署方式。完美的实现了静态文件打包到GO中，很好的简化用户的使用体验。
 
 
 ## ✨ 特性
