@@ -8,6 +8,8 @@
 [![License](https://img.shields.io/github/license/nicelizhi/easy-admin
 )](https://github.com/nicelizhi/easy-admin)
 [![Commits](https://img.shields.io/github/commit-activity/m/nicelizhi/easy-admin?color=ffff00)](https://github.com/nicelizhi/easy-admin/commits/main)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicesteven/easy-admin)](https://hub.docker.com/r/nicesteven/easy-admin)
+
 
 ## About Easy-Admin
 
