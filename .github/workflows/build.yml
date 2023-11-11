@@ -68,6 +68,12 @@ jobs:
 
       - name: Build
         run: CGO_ENABLED=0 go build -ldflags="-s -w" -a -installsuffix "" -o easy-admin .
+          
+      - name: Log in to Docker Hub
+        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        with:
+          username: ${{ secrets.HUB_DOCKER_USERNAME }}
+          password: ${{ secrets.HUB_DOCKER_PASSWORD }}
       
       - name: Extract metadata (tags, labels) for Docker
         id: meta
