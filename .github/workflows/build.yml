@@ -67,7 +67,7 @@ jobs:
         run: go mod tidy
 
       - name: Build
-        run: CGO_ENABLED=0 go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o easy-admin .
+        run: CGO_ENABLED=0 go build -ldflags="-s -w" -a -installsuffix "" -o easy-admin .
       
       - name: Extract metadata (tags, labels) for Docker
         id: meta
