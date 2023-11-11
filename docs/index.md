@@ -1,5 +1,5 @@
 
-# Easy Adminn
+# easy-admin
 [![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
@@ -7,7 +7,11 @@
 )](https://github.com/nicelizhi/easy-admin)
 
 
-> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
+>> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
+
+## online demo
+- [Vue2 demo](https://easy-admin-ui.vercel.app)  
+- [Arco demo](https://hello-arco-pro.vercel.app/)( testing now)  
 
 ## ✨ Feature
 
@@ -33,8 +37,6 @@
 
 - TimeZone Support
 
-- TODO: unit test
-
 
 ## 🎁 Internal
 
@@ -51,6 +53,7 @@
 1. Code generation: According to the data table structure, generate the corresponding addition, deletion, modification, and check corresponding business, and the whole process of visual operation, so that the basic business can be implemented with zero code.
 1. Service monitoring: View the basic information of some servers.
 1. Content management: demo function, including classification management and content management. You can refer to the easy to use quick start.
+
 
 # Api Document Generate
 
