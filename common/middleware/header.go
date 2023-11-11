@@ -28,6 +28,7 @@ func Options(c *gin.Context) {
 		c.Header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS")
 		c.Header("Access-Control-Allow-Headers", "authorization, origin, content-type, accept")
 		c.Header("Allow", "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS")
+		c.Header("Access-Control-Allow-Credentials", "true")
 		c.Header("Content-Type", "application/json")
 		c.AbortWithStatus(200)
 	}
@@ -38,6 +39,10 @@ func Options(c *gin.Context) {
 func Secure(c *gin.Context) {
 	origin := c.Request.Header.Get("Origin")
 	c.Header("Access-Control-Allow-Origin", origin)
+	c.Header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS")
+	c.Header("Access-Control-Allow-Headers", "authorization, origin, content-type, accept")
+	c.Header("Allow", "HEAD,GET,POST,PUT,PATCH,DELETE,OPTIONS")
+	c.Header("Access-Control-Allow-Credentials", "true")
 	//c.Header("X-Frame-Options", "DENY")
 	c.Header("X-Content-Type-Options", "nosniff")
 	c.Header("X-XSS-Protection", "1; mode=block")
