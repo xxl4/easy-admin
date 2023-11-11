@@ -22,7 +22,7 @@ all:
 # build vue ui
 build-ui:
 	@echo "build node start"
-	cd ./ui/ && npm run build:prod
+	cd ./ui/ && npm run build:prod:base
 
 # build go application
 build:
