@@ -1,15 +1,30 @@
 
-# easy-admin
+# Easy-Admin
+
 [![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
+[![HitCount](https://views.whatilearened.today/views/github/nicelizhi/easy-admin.svg)](https://github.com/nicelizhi/easy-admin)
 [![License](https://img.shields.io/github/license/nicelizhi/easy-admin
 )](https://github.com/nicelizhi/easy-admin)
+[![Commits](https://img.shields.io/github/commit-activity/m/nicelizhi/easy-admin?color=ffff00)](https://github.com/nicelizhi/easy-admin/commits/main)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicesteven/easy-admin)](https://hub.docker.com/r/nicesteven/easy-admin)
+
+
+## About Easy-Admin
+
+Easyadmin is a Quick, beautiful and modern admin gererator for Go VUE application.
+
+English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
 
-## ✨ Feature
+## Online demo
+- [Vue2 demo](https://easy-admin-ui.vercel.app)  
+- [Arco demo](https://hello-arco-pro.vercel.app/)( testing now)  
+
+##  Feature
 
 - Follow RESTful API design specifications
 
@@ -31,12 +46,12 @@
 
 - Multi Language
 
+- Multi-platform (Darwin Freebsd Linux Windows)
+
 - TimeZone Support
 
-- TODO: unit test
 
-
-## 🎁 Internal
+## Internal
 
 1. User management: The user is the system operator, this function mainly completes the system user configuration.
 2. Department management: configure the system organization (company, department, group), and display the tree structure to support data permissions.
@@ -52,6 +67,7 @@
 1. Service monitoring: View the basic information of some servers.
 1. Content management: demo function, including classification management and content management. You can refer to the easy to use quick start.
 
+
 # Api Document Generate
 
 ```
@@ -66,13 +82,13 @@ http://localhost:8000/swagger/admin/index.html
 
 # Install
 
-[Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+- [Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
 
-[Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+- [Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
 
-[K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+- [K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
 
-[Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+- [Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
 
 
 # Configure

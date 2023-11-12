@@ -191,9 +191,9 @@ func initRouter() {
 			AcceptLanguage:   []language.Tag{language.English, language.Chinese},
 			DefaultLanguage:  language.English,
 			UnmarshalFunc:    json.Unmarshal,
-			FormatBundleFile: "json",
+			FormatBundleFile: "json", //default json format
 		})))
-
+	// when you will pack vue into go,you should need config it
 	r.NoRoute(func(ctx *gin.Context) {
 		accept := ctx.Request.Header.Get("Accept")
 		flag := strings.Contains(accept, "text/html")

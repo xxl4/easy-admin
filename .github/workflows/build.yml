@@ -53,7 +53,7 @@ jobs:
         run: cd ./ui/ && npm install --legacy-peer-deps
       
       - name : npm build
-        run: cd ./ui/ && npm run build:prod --legacy-peer-deps
+        run: cd ./ui/ && npm run build:prod:base --legacy-peer-deps
       
       - name: Set up Go ${{ matrix.go-version }}
         uses: actions/setup-go@v4
@@ -67,7 +67,7 @@ jobs:
         run: go mod tidy
 
       - name: Build
-        run: CGO_ENABLED=0 go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o easy-admin .
+        run: CGO_ENABLED=0 go build -ldflags="-s -w" -a -installsuffix "" -o easy-admin .
 
       - name: Build the Docker image and push
         run: |
@@ -81,6 +81,7 @@ jobs:
           echo "************ docker images end"
           docker push ${{ env.IMAGE_NAME_TAG }}  # 推送
           echo "************ docker push end"
+        
           
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
@@ -101,3 +102,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: nicesteven/easy-admin:latest
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
