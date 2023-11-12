@@ -68,6 +68,19 @@ jobs:
 
       - name: Build
         run: CGO_ENABLED=0 go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o easy-admin .
+
+      - name: Build the Docker image and push
+        run: |
+          docker login --username=${{ secrets.DOCKER_USERNAME }} registry.ap-southeast-1.aliyuncs.com --password=${{ secrets.DOCKER_PASSWORD }}
+          echo "************ docker login end"
+          docker build -t easy-admin:latest .
+          echo "************ docker build end"
+          docker tag easy-admin ${{ env.IMAGE_NAME_TAG }}
+          echo "************ docker tag end"
+          docker images
+          echo "************ docker images end"
+          docker push ${{ env.IMAGE_NAME_TAG }}  # 推送
+          echo "************ docker push end"
           
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
@@ -80,14 +93,6 @@ jobs:
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: nicesteven/easy-admin
-
-      - name: Build and push Docker image 1.2.0
-        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: nicesteven/easy-admin:1.2.0
       
       - name: Build and push Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
