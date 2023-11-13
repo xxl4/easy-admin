@@ -24,7 +24,7 @@ require (
 	github.com/prometheus/client_golang v1.17.0
 	github.com/qiniu/go-sdk/v7 v7.18.2
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/shirou/gopsutil/v3 v3.23.9
+	github.com/shirou/gopsutil/v3 v3.23.10
 	github.com/spf13/cobra v1.0.0
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
