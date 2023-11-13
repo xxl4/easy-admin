@@ -14,7 +14,7 @@ require (
 	github.com/gin-contrib/i18n v1.0.0
 	github.com/gin-gonic/autotls v0.0.5
 	github.com/gin-gonic/gin v1.9.1
-	github.com/google/uuid v1.3.1
+	github.com/google/uuid v1.4.0
 	github.com/huaweicloud/huaweicloud-sdk-go-obs v3.23.9+incompatible
 	github.com/mssola/user_agent v0.6.0
 	github.com/nicelizhi/easy-admin-core v0.0.0-00010101000000-000000000000
