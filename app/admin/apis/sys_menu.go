@@ -10,6 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 
+	_ "github.com/nicelizhi/easy-admin-core/sdk/pkg/response"
 	"github.com/nicelizhi/easy-admin/app/admin/service"
 	"github.com/nicelizhi/easy-admin/app/admin/service/dto"
 )

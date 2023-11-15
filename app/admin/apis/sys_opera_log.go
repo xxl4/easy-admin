@@ -8,6 +8,7 @@ import (
 	"github.com/nicelizhi/easy-admin/app/admin/service/dto"
 
 	"github.com/nicelizhi/easy-admin-core/sdk/api"
+	_ "github.com/nicelizhi/easy-admin-core/sdk/pkg/response"
 
 	ginI18n "github.com/gin-contrib/i18n"
 	"github.com/gin-gonic/gin"
