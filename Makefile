@@ -61,3 +61,7 @@ stop:
 # debug file
 debug:
 	dlv debug $(file)
+
+.PHONY: docs
+docs:
+	swag init -g easy-admin.go --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
