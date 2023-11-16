@@ -353,7 +353,7 @@ definitions:
         type: integer
       sysApi:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysApi'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi'
         type: array
       title:
         description: 显示名称
@@ -416,7 +416,7 @@ definitions:
         type: integer
       sysApi:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysApi'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi'
         type: array
       title:
         description: 显示名称
@@ -529,11 +529,11 @@ definitions:
         type: string
       sysDept:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysDept'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysDept'
         type: array
       sysMenu:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysMenu'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysMenu'
         type: array
       updateBy:
         type: integer
@@ -577,11 +577,11 @@ definitions:
         type: string
       sysDept:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysDept'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysDept'
         type: array
       sysMenu:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysMenu'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysMenu'
         type: array
       updateBy:
         type: integer
@@ -679,7 +679,28 @@ definitions:
         description: 用户ID
         type: integer
     type: object
-  easy-admin_app_admin_models.SysApi:
+  github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Page:
+    properties:
+      count:
+        type: integer
+      pageIndex:
+        type: integer
+      pageSize:
+        type: integer
+    type: object
+  github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response:
+    properties:
+      code:
+        type: integer
+      msg:
+        type: string
+      requestId:
+        description: 数据集
+        type: string
+      status:
+        type: string
+    type: object
+  github_com_nicelizhi_easy-admin_app_admin_models.SysApi:
     properties:
       action:
         type: string
@@ -702,7 +723,7 @@ definitions:
       updatedAt:
         type: string
     type: object
-  easy-admin_app_admin_models.SysConfig:
+  github_com_nicelizhi_easy-admin_app_admin_models.SysConfig:
     properties:
       configKey:
         type: string
@@ -727,11 +748,11 @@ definitions:
       updatedAt:
         type: string
     type: object
-  easy-admin_app_admin_models.SysDept:
+  github_com_nicelizhi_easy-admin_app_admin_models.SysDept:
     properties:
       children:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysDept'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysDept'
         type: array
       createBy:
         type: integer
@@ -772,7 +793,7 @@ definitions:
       updatedAt:
         type: string
     type: object
-  easy-admin_app_admin_models.SysMenu:
+  github_com_nicelizhi_easy-admin_app_admin_models.SysMenu:
     properties:
       action:
         type: string
@@ -784,7 +805,7 @@ definitions:
         type: string
       children:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysMenu'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysMenu'
         type: array
       component:
         type: string
@@ -824,7 +845,7 @@ definitions:
         type: integer
       sysApi:
         items:
-          $ref: '#/definitions/easy-admin_app_admin_models.SysApi'
+          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi'
         type: array
       title:
         type: string
@@ -851,27 +872,6 @@ definitions:
     - username
     - uuid
     type: object
-  response.Page:
-    properties:
-      count:
-        type: integer
-      pageIndex:
-        type: integer
-      pageSize:
-        type: integer
-    type: object
-  response.Response:
-    properties:
-      code:
-        type: integer
-      msg:
-        type: string
-      requestId:
-        description: 数据集
-        type: string
-      status:
-        type: string
-    type: object
   tools.Params:
     properties:
       treeCode:
@@ -896,7 +896,7 @@ definitions:
       createdAt:
         type: string
       deletedAt:
-        type: string
+        type: integer
       dictType:
         type: string
       edit:
@@ -986,7 +986,7 @@ definitions:
       dataScope:
         type: string
       deletedAt:
-        type: string
+        type: integer
       functionAuthor:
         description: 功能作者
         type: string
@@ -1052,12 +1052,12 @@ definitions:
     type: object
 info:
   contact: {}
-  description: 基于Gin + Vue + Element UI的前后端分离权限管理系统的接口文档
+  description: 基于Gin + Vue 的前后端分离权限管理系统的接口文档
   license:
     name: Apache 2.0
     url: https://github.com/nicelizhi/easy-admin/blob/master/LICENSE.md
   title: Easy-Admin
-  version: 1.0.3
+  version: 1.0.0
 paths:
   /api/v1/app-config:
     get:
@@ -1067,7 +1067,7 @@ paths:
           description: '{"code": 200, "data": [...]}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
                   additionalProperties:
@@ -1085,7 +1085,7 @@ paths:
           description: '{"code": 200, "data": [...]}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
                   type: string
@@ -1097,6 +1097,24 @@ paths:
       summary: 获取验证码
       tags:
       - 登陆
+  /api/v1/cusmenu:
+    get:
+      description: 获取JSON
+      parameters:
+      - description: menuName
+        in: query
+        name: menuName
+        type: string
+      responses:
+        "200":
+          description: '{"code": 200, "data": [...]}'
+          schema:
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
+      security:
+      - Bearer: []
+      summary: Menu列表数据
+      tags:
+      - 菜单
   /api/v1/db/columns/page:
     get:
       description: 数据库表列分页列表 / database table column page list
@@ -1117,7 +1135,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       summary: 分页列表数据 / page list data
       tags:
       - 工具 / 生成工具
@@ -1141,7 +1159,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       summary: 分页列表数据 / page list data
       tags:
       - 工具 / 生成工具
@@ -1185,7 +1203,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 分页部门列表数据
@@ -1224,7 +1242,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 获取部门数据
@@ -1270,7 +1288,7 @@ paths:
           description: '{"code": 200, "data": [...]}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
                   items:
@@ -1297,7 +1315,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Successfully
             deleted")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除字典数据
@@ -1330,7 +1348,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 字典数据列表
@@ -1351,7 +1369,7 @@ paths:
         "200":
           description: '{"code": 200, "message": "添加成功"}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 添加字典数据
@@ -1370,7 +1388,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 通过编码获取字典数据
@@ -1392,7 +1410,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Update
             completed")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改字典数据
@@ -1412,7 +1430,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除字典类型
@@ -1445,7 +1463,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 字典类型列表数据
@@ -1466,7 +1484,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 添加字典类型
@@ -1492,7 +1510,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 字典类型全部数据 代码生成使用接口
@@ -1511,7 +1529,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 字典类型通过字典id获取
@@ -1532,7 +1550,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改字典类型
@@ -1545,7 +1563,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 获取个人信息
@@ -1593,7 +1611,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除菜单
@@ -1610,7 +1628,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: Menu列表数据
@@ -1631,7 +1649,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 创建菜单
@@ -1649,7 +1667,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: Menu详情数据
@@ -1675,7 +1693,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改菜单
@@ -1696,7 +1714,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 角色修改使用的菜单列表
@@ -1709,7 +1727,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 根据登录角色名称获取菜单列表数据（左菜单使用）
@@ -1729,7 +1747,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除岗位
@@ -1758,7 +1776,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 岗位列表数据
@@ -1779,7 +1797,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 添加岗位
@@ -1801,7 +1819,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改岗位
@@ -1820,7 +1838,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 获取岗位信息
@@ -1866,7 +1884,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除用户角色
@@ -1899,7 +1917,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 角色列表数据
@@ -1920,7 +1938,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 创建角色
@@ -1942,7 +1960,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 更新角色数据权限
@@ -1960,7 +1978,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 获取Role数据
@@ -1981,7 +1999,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改用户角色
@@ -1994,7 +2012,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 系统信息
@@ -2011,7 +2029,7 @@ paths:
             completed")}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
                   additionalProperties: true
@@ -2040,7 +2058,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Update
             completed")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 设置配置
@@ -2061,7 +2079,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Successfully
             deleted")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除接口管理
@@ -2099,15 +2117,15 @@ paths:
           description: '{"code": 200, "data": [...]}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
                   allOf:
-                  - $ref: '#/definitions/response.Page'
+                  - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Page'
                   - properties:
                       list:
                         items:
-                          $ref: '#/definitions/easy-admin_app_admin_models.SysApi'
+                          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi'
                         type: array
                     type: object
               type: object
@@ -2129,10 +2147,10 @@ paths:
           description: '{"code": 200, "data": [...]}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
-                  $ref: '#/definitions/easy-admin_app_admin_models.SysApi'
+                  $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi'
               type: object
       security:
       - Bearer: []
@@ -2155,7 +2173,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Update
             completed")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改接口管理
@@ -2177,7 +2195,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Successfully
             deleted")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除配置管理
@@ -2215,15 +2233,15 @@ paths:
           description: '{"code": 200, "data": [...]}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
                   allOf:
-                  - $ref: '#/definitions/response.Page'
+                  - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Page'
                   - properties:
                       list:
                         items:
-                          $ref: '#/definitions/easy-admin_app_admin_models.SysApi'
+                          $ref: '#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi'
                         type: array
                     type: object
               type: object
@@ -2248,7 +2266,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Created
             successfully")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 创建配置管理
@@ -2267,7 +2285,7 @@ paths:
           description: '{"code": 200, "data": [...]}'
           schema:
             allOf:
-            - $ref: '#/definitions/response.Response'
+            - $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
             - properties:
                 data:
                   $ref: '#/definitions/dto.SysConfigByKeyReq'
@@ -2293,7 +2311,7 @@ paths:
           description: '{"code": 200, "message": ginI18n.MustGetMessage(c, "Update
             completed")}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改配置管理
@@ -2313,7 +2331,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 登录日志删除
@@ -2350,7 +2368,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 登录日志列表
@@ -2368,7 +2386,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 登录日志通过id获取
@@ -2388,7 +2406,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除操作日志
@@ -2433,7 +2451,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 操作日志列表
@@ -2451,7 +2469,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 操作日志通过id获取
@@ -2490,7 +2508,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 创建用户
@@ -2509,7 +2527,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 删除用户数据
@@ -2527,7 +2545,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 获取用户
@@ -2548,7 +2566,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改用户数据
@@ -2625,7 +2643,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 获取配置
@@ -2651,7 +2669,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       summary: 分页列表数据
       tags:
       - 工具 / 生成工具
@@ -2670,7 +2688,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改头像
@@ -2683,7 +2701,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 获取个人中心用户
@@ -2705,7 +2723,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 重置用户密码
@@ -2727,7 +2745,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改密码
@@ -2749,7 +2767,7 @@ paths:
         "200":
           description: '{"code": 200, "data": [...]}'
           schema:
-            $ref: '#/definitions/response.Response'
+            $ref: '#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response'
       security:
       - Bearer: []
       summary: 修改用户状态
