@@ -32,7 +32,7 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
@@ -64,7 +64,7 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
@@ -81,6 +81,36 @@ const docTemplateadmin = `{
                                     }
                                 }
                             ]
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/cusmenu": {
+            "get": {
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
+                "description": "获取JSON",
+                "tags": [
+                    "菜单"
+                ],
+                "summary": "Menu列表数据",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "menuName",
+                        "name": "menuName",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\": 200, \"data\": [...]}",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -117,7 +147,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -154,7 +184,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -196,7 +226,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -291,7 +321,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -365,7 +395,7 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
@@ -432,7 +462,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -466,7 +496,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": \"添加成功\"}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -497,7 +527,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Successfully deleted\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -528,7 +558,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -562,7 +592,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Update completed\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -616,7 +646,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -650,7 +680,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -681,7 +711,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -723,7 +753,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -754,7 +784,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -788,7 +818,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -810,7 +840,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -871,7 +901,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -905,7 +935,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -936,7 +966,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -966,7 +996,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1007,7 +1037,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1041,7 +1071,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1063,7 +1093,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1111,7 +1141,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1145,7 +1175,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1176,7 +1206,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1212,7 +1242,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1243,7 +1273,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1338,7 +1368,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1372,7 +1402,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1403,7 +1433,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1439,7 +1469,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1469,7 +1499,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1503,7 +1533,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1525,7 +1555,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1552,7 +1582,7 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
@@ -1600,7 +1630,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Update completed\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1662,7 +1692,7 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
@@ -1670,7 +1700,7 @@ const docTemplateadmin = `{
                                         "data": {
                                             "allOf": [
                                                 {
-                                                    "$ref": "#/definitions/response.Page"
+                                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Page"
                                                 },
                                                 {
                                                     "type": "object",
@@ -1678,7 +1708,7 @@ const docTemplateadmin = `{
                                                         "list": {
                                                             "type": "array",
                                                             "items": {
-                                                                "$ref": "#/definitions/easy-admin_app_admin_models.SysApi"
+                                                                "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi"
                                                             }
                                                         }
                                                     }
@@ -1718,7 +1748,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Successfully deleted\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1750,13 +1780,13 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "data": {
-                                            "$ref": "#/definitions/easy-admin_app_admin_models.SysApi"
+                                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi"
                                         }
                                     }
                                 }
@@ -1794,7 +1824,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Update completed\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1856,7 +1886,7 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
@@ -1864,7 +1894,7 @@ const docTemplateadmin = `{
                                         "data": {
                                             "allOf": [
                                                 {
-                                                    "$ref": "#/definitions/response.Page"
+                                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Page"
                                                 },
                                                 {
                                                     "type": "object",
@@ -1872,7 +1902,7 @@ const docTemplateadmin = `{
                                                         "list": {
                                                             "type": "array",
                                                             "items": {
-                                                                "$ref": "#/definitions/easy-admin_app_admin_models.SysApi"
+                                                                "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi"
                                                             }
                                                         }
                                                     }
@@ -1915,7 +1945,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Created successfully\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1948,7 +1978,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Successfully deleted\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -1980,7 +2010,7 @@ const docTemplateadmin = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/response.Response"
+                                    "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                                 },
                                 {
                                     "type": "object",
@@ -2024,7 +2054,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"message\": ginI18n.MustGetMessage(c, \"Update completed\")}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2084,7 +2114,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2115,7 +2145,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2145,7 +2175,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2217,7 +2247,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2248,7 +2278,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2278,7 +2308,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2342,7 +2372,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2373,7 +2403,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2407,7 +2437,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2436,7 +2466,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2534,7 +2564,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2595,7 +2625,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2629,7 +2659,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2651,7 +2681,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2687,7 +2717,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2723,7 +2753,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -2759,7 +2789,7 @@ const docTemplateadmin = `{
                     "200": {
                         "description": "{\"code\": 200, \"data\": [...]}",
                         "schema": {
-                            "$ref": "#/definitions/response.Response"
+                            "$ref": "#/definitions/github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response"
                         }
                     }
                 }
@@ -3312,7 +3342,7 @@ const docTemplateadmin = `{
                 "sysApi": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysApi"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi"
                     }
                 },
                 "title": {
@@ -3399,7 +3429,7 @@ const docTemplateadmin = `{
                 "sysApi": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysApi"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi"
                     }
                 },
                 "title": {
@@ -3567,13 +3597,13 @@ const docTemplateadmin = `{
                 "sysDept": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysDept"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysDept"
                     }
                 },
                 "sysMenu": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysMenu"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysMenu"
                     }
                 },
                 "updateBy": {
@@ -3636,13 +3666,13 @@ const docTemplateadmin = `{
                 "sysDept": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysDept"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysDept"
                     }
                 },
                 "sysMenu": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysMenu"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysMenu"
                     }
                 },
                 "updateBy": {
@@ -3788,7 +3818,39 @@ const docTemplateadmin = `{
                 }
             }
         },
-        "easy-admin_app_admin_models.SysApi": {
+        "github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Page": {
+            "type": "object",
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "pageIndex": {
+                    "type": "integer"
+                },
+                "pageSize": {
+                    "type": "integer"
+                }
+            }
+        },
+        "github_com_nicelizhi_easy-admin-core_sdk_pkg_response.Response": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "msg": {
+                    "type": "string"
+                },
+                "requestId": {
+                    "description": "数据集",
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_nicelizhi_easy-admin_app_admin_models.SysApi": {
             "type": "object",
             "properties": {
                 "action": {
@@ -3823,7 +3885,7 @@ const docTemplateadmin = `{
                 }
             }
         },
-        "easy-admin_app_admin_models.SysConfig": {
+        "github_com_nicelizhi_easy-admin_app_admin_models.SysConfig": {
             "type": "object",
             "properties": {
                 "configKey": {
@@ -3861,13 +3923,13 @@ const docTemplateadmin = `{
                 }
             }
         },
-        "easy-admin_app_admin_models.SysDept": {
+        "github_com_nicelizhi_easy-admin_app_admin_models.SysDept": {
             "type": "object",
             "properties": {
                 "children": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysDept"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysDept"
                     }
                 },
                 "createBy": {
@@ -3925,7 +3987,7 @@ const docTemplateadmin = `{
                 }
             }
         },
-        "easy-admin_app_admin_models.SysMenu": {
+        "github_com_nicelizhi_easy-admin_app_admin_models.SysMenu": {
             "type": "object",
             "properties": {
                 "action": {
@@ -3943,7 +4005,7 @@ const docTemplateadmin = `{
                 "children": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysMenu"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysMenu"
                     }
                 },
                 "component": {
@@ -4003,7 +4065,7 @@ const docTemplateadmin = `{
                 "sysApi": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/easy-admin_app_admin_models.SysApi"
+                        "$ref": "#/definitions/github_com_nicelizhi_easy-admin_app_admin_models.SysApi"
                     }
                 },
                 "title": {
@@ -4039,38 +4101,6 @@ const docTemplateadmin = `{
                     "type": "string"
                 },
                 "uuid": {
-                    "type": "string"
-                }
-            }
-        },
-        "response.Page": {
-            "type": "object",
-            "properties": {
-                "count": {
-                    "type": "integer"
-                },
-                "pageIndex": {
-                    "type": "integer"
-                },
-                "pageSize": {
-                    "type": "integer"
-                }
-            }
-        },
-        "response.Response": {
-            "type": "object",
-            "properties": {
-                "code": {
-                    "type": "integer"
-                },
-                "msg": {
-                    "type": "string"
-                },
-                "requestId": {
-                    "description": "数据集",
-                    "type": "string"
-                },
-                "status": {
                     "type": "string"
                 }
             }
@@ -4111,7 +4141,7 @@ const docTemplateadmin = `{
                     "type": "string"
                 },
                 "deletedAt": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "dictType": {
                     "type": "string"
@@ -4246,7 +4276,7 @@ const docTemplateadmin = `{
                     "type": "string"
                 },
                 "deletedAt": {
-                    "type": "string"
+                    "type": "integer"
                 },
                 "functionAuthor": {
                     "description": "功能作者",
@@ -4351,7 +4381,7 @@ const docTemplateadmin = `{
 
 // SwaggerInfoadmin holds exported Swagger Info so clients can modify it
 var SwaggerInfoadmin = &swag.Spec{
-	Version:          "1.0.3",
+	Version:          "1.0.0",
 	Host:             "",
 	BasePath:         "",
 	Schemes:          []string{},
