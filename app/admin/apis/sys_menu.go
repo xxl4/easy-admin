@@ -96,6 +96,7 @@ func (e SysMenu) CusGetPage(c *gin.Context) {
 			meta2["hideInMenu"] = false
 			meta2["icon"] = item2.Icon
 			meta2["order"] = item2.Sort
+			meta2["roles"] = item2.Permission
 			litem2["meta"] = meta2
 			fmt.Println(index1)
 			children = append(children[:len(children)], litem2)
