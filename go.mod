@@ -11,6 +11,7 @@ require (
 	github.com/bitly/go-simplejson v0.5.1
 	github.com/bytedance/go-tagexpr/v2 v2.9.11
 	github.com/casbin/casbin/v2 v2.77.2
+	github.com/gin-contrib/gzip v0.0.6
 	github.com/gin-contrib/i18n v1.0.0
 	github.com/gin-gonic/autotls v0.0.5
 	github.com/gin-gonic/gin v1.9.1
