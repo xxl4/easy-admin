@@ -43,9 +43,13 @@
 
 - 多租户的支持
 
-- 多语言支持，现支持 中文与英语，采用灵活的接口配置，方便添加更多语言的支持
-
 - 时区功能支持
+
+- 静态打包，从而简化部署实施流程
+
+- Gzip 的压缩支持，从而可以让您的应用跑的更快
+
+- 多语言支持，现支持 中文与英语，采用灵活的接口配置，方便添加更多语言的支持
 
 - 多平台支持，多CPU架构支持。
 
@@ -68,15 +72,27 @@
 1. 服务监控：查看一些服务器的基本信息。
 1. 定时任务：自动化任务，目前支持接口调用和函数调用。
 
-# 安装
+# Api 文档生成
 
-- [Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+```
+swag init --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
+```
 
-- [Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+# 在线文档查看
 
-- [K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+```
+http://localhost:8000/swagger/admin/index.html
+```
 
-- [Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+# 如何安装部署
+
+- [Docker 安装部署](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+
+- [Docker Composer 部署安装](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+
+- [K8s 部署安装](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+
+- [二进制部署安装](https://nicelizhi.github.io/easy-admin/guide/install/binary)
 
 
 # 配置
@@ -92,7 +108,3 @@
 
 # Discussions
 [https://github.com/nicelizhi/easy-admin/discussions](https://github.com/nicelizhi/easy-admin/discussions) 
-
-
-
-

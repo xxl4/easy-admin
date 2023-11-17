@@ -42,7 +42,7 @@ for os in $os_all; do
         fi  
         cp ../LICENSE ${easy_admin_path}
         cp -rf ../config/*.sql ${easy_admin_path}
-        cp -rf ../config/README.md ${easy_admin_path}
+        cp -rf ../README.md ${easy_admin_path}
         cp -rf ../config/settings.yml ${easy_admin_path}
         cp -rf ../config/settings.full.yml ${easy_admin_path}
         rm -rf ${easy_admin_path}/legacy

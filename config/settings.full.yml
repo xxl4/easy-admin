@@ -16,6 +16,15 @@ settings:
     timezone: "Africa/Cairo"
     # local
     local: "en"
+    # gzip enable
+    gzip: true
+    #gzip level 
+    # options 1、BestCompression 1、BestSpeed 1、DefaultCompression 1、NoCompression
+    # NoCompression      = 0
+    # BestSpeed          = 1
+    # BestCompression    = 9
+    # DefaultCompression = -1
+    gziplevel: 9
   ssl:
     # https domain
     domain: localhost:8000

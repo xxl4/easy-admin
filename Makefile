@@ -9,7 +9,7 @@ LDFLAGS := -s -w
 # application name
 PROJECT:=easy-admin
 # application version
-VERSION := 1.2.0
+VERSION := 1.3.0
 # application url
 URL := https://github.com/nicelizhi/easy-admin
 
@@ -26,7 +26,7 @@ build-ui:
 
 # build go application
 build:
-	CGO_ENABLED=0 go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o $(PROJECT) .
+	CGO_ENABLED=0 go mod tidy && go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o $(PROJECT) .
 
 # make build-linux
 build-linux:
@@ -55,9 +55,14 @@ start:
 	nohup ./$(PROJECT) server -c=config/settings.dev_steve.yml >> acc.txt &
 	ps aux | grep "$(PROJECT)"
 
+.PHONY: easy-admin
 stop:
 	pkill $(PROJECT)
 
 # debug file
 debug:
 	dlv debug $(file)
+
+.PHONY: docs
+docs:
+	swag init -g easy-admin.go --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
