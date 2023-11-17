@@ -37,11 +37,13 @@
 
 - 多租户的支持
 
-- 多语言支持
+- 多语言支持 （已支持中文，英文）
 
 - 时区功能支持
 
-- TODO: 单元测试
+- 静态打包，从而简化部署实施流程
+
+- Gzip 的压缩支持，从而可以让您的应用跑的更快
 
 
 ## 🎁 内置
@@ -63,3 +65,39 @@
 1. 内容管理：demo功能，下设分类管理、内容管理。可以参考使用方便快速入门。
 1. 定时任务：自动化任务，目前支持接口调用和函数调用。
 
+# Api 文档生成
+
+```
+swag init --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
+```
+
+# 在线文档查看
+
+```
+http://localhost:8000/swagger/admin/index.html
+```
+
+# 如何安装部署
+
+- [Docker 安装部署](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+
+- [Docker Composer 部署安装](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+
+- [K8s 部署安装](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+
+- [二进制部署安装](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+
+
+# How to Configure
+
+[Configure Docs](https://nicelizhi.github.io/easy-admin/guide/configure/)
+
+# Document
+[https://nicelizhi.github.io/easy-admin/](https://nicelizhi.github.io/easy-admin/) 
+
+# Issue
+[https://github.com/nicelizhi/easy-admin/issues](https://github.com/nicelizhi/easy-admin/issues)   
+[https://gitee.com/nicelizhi/easy-admin/issues](https://gitee.com/nicelizhi/easy-admin/issues)  (中国)
+
+# Discussions
+[https://github.com/nicelizhi/easy-admin/discussions](https://github.com/nicelizhi/easy-admin/discussions) 
