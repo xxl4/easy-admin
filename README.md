@@ -13,7 +13,7 @@
 
 ## About Easy-Admin
 
-Easyadmin is a Quick, beautiful and modern admin gererator for Go VUE application.
+Easyadmin is a Quick, beautiful and modern admin generator for Go VUE application.
 
 English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
