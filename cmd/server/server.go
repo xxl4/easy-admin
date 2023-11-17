@@ -180,9 +180,9 @@ func initRouter() {
 		log.Fatal("not support other engine")
 		//os.Exit(-1)
 	}
-	if config.SslConfig.Enable {
-		r.Use(handler.TlsHandler())
-	}
+	// if config.SslConfig.Enable {
+	r.Use(handler.TlsHandler()) // add more secure for it
+	// }
 	r.Use(common.Sentinel()).
 		Use(common.RequestId(pkg.TrafficKey)).
 		Use(api.SetRequestLogger).
