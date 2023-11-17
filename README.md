@@ -26,9 +26,7 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 ##  Feature
 
-- Follow RESTful API design specifications
-
-- Based on the GIN WEB API framework, it provides rich middleware support (user authentication, cross-domain, access log, tracking ID, etc.)
+- Based on the GIN WEB API framework, it provides rich middleware support (user authentication, cross-domain, access log, tracking ID, Cahce, Zip etc.)
 
 - RBAC access control model based on Casbin
 
@@ -49,6 +47,8 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 - Multi-platform (Darwin Freebsd Linux Windows)
 
 - TimeZone Support
+
+- Static packaging for vue page
 
 
 ## Internal
