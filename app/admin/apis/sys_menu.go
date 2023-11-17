@@ -1,6 +1,8 @@
 package apis
 
 import (
+	"fmt"
+
 	"github.com/nicelizhi/easy-admin/app/admin/models"
 
 	"github.com/nicelizhi/easy-admin-core/sdk/api"
@@ -10,6 +12,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 
+	_ "github.com/nicelizhi/easy-admin-core/sdk/pkg/response"
 	"github.com/nicelizhi/easy-admin/app/admin/service"
 	"github.com/nicelizhi/easy-admin/app/admin/service/dto"
 )
@@ -76,7 +79,41 @@ func (e SysMenu) CusGetPage(c *gin.Context) {
 		return
 	}
 
-	list2 := make(map[string]interface{}, 0)
+	list2 := make([]interface{}, 0)
+
+	for index, item := range list {
+		var litem = make(map[string]interface{})
+		var meta = make(map[string]interface{})
+		var children = make([]interface{}, 0)
+		for index1, item2 := range item.Children {
+			var litem2 = make(map[string]interface{})
+			var meta2 = make(map[string]interface{})
+
+			litem2["name"] = item2.MenuName
+			litem2["path"] = item2.Path
+			meta2["locale"] = item2.Permission
+			meta2["requiresAuth"] = true
+			meta2["hideInMenu"] = false
+			meta2["icon"] = item2.Icon
+			meta2["order"] = item2.Sort
+			meta2["roles"] = item2.Permission
+			litem2["meta"] = meta2
+			fmt.Println(index1)
+			children = append(children[:len(children)], litem2)
+		}
+
+		meta["locale"] = item.Permission
+		meta["requiresAuth"] = true
+		meta["hideInMenu"] = false
+		meta["icon"] = item.Icon
+		meta["order"] = item.Sort
+		litem["name"] = item.MenuName
+		litem["path"] = item.Path
+		litem["meta"] = meta
+		litem["children"] = children
+		fmt.Println(index, " = ", item)
+		list2 = append(list2[:len(list2)], litem)
+	}
 
 	e.OK(list2, ginI18n.MustGetMessage(c, "Query successful"))
 }

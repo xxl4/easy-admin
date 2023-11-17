@@ -446,7 +446,7 @@ func (e SysUser) GetInfo(c *gin.Context) {
 	req.Id = user.GetUserId(c)
 	err = s.Get(&req, p, &sysUser)
 	if err != nil {
-		e.Error(http.StatusUnauthorized, err, "登录失败")
+		e.Error(http.StatusUnauthorized, err, ginI18n.MustGetMessage(c, "Login failed"))
 		return
 	}
 	mp["introduction"] = " am a super administrator"

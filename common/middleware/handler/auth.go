@@ -92,7 +92,7 @@ func Authenticator(c *gin.Context) (interface{}, error) {
 	if config.ApplicationConfig.Mode != "dev" {
 		if !captcha.Verify(loginVals.UUID, loginVals.Code, true) {
 			username = loginVals.Username
-			msg = "验证码错误"
+			msg = ginI18n.MustGetMessage(c, "Verification code error")
 			status = "1"
 
 			return nil, jwt.ErrInvalidVerificationode
@@ -104,7 +104,7 @@ func Authenticator(c *gin.Context) (interface{}, error) {
 
 		return map[string]interface{}{"user": sysUser, "role": role}, nil
 	} else {
-		msg = "登录失败"
+		msg = ginI18n.MustGetMessage(c, "Login failed")
 		status = "1"
 		log.Warnf("%s login failed!", loginVals.Username)
 	}

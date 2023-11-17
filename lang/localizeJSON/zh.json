@@ -35,6 +35,8 @@
     "Data migration template parsing failed! Error details": "数据迁移模版解析失败！错误详情：%s",
     "Views directory creation failed! Error details": "views目录创建失败！错误详情：%s",
     "Upload Success": "上传成功",
+    "Login failed": "登录失败",
+    "Verification code error": "验证码错误",
 
     
 
