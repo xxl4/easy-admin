@@ -12,6 +12,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/gin-contrib/gzip"
 	"github.com/nicelizhi/easy-admin-core/config/source/file"
 	"github.com/nicelizhi/easy-admin-core/sdk"
 	"github.com/nicelizhi/easy-admin-core/sdk/api"
@@ -183,6 +184,7 @@ func initRouter() {
 	// if config.SslConfig.Enable {
 	r.Use(handler.TlsHandler()) // add more secure for it
 	// }
+	r.Use(gzip.Gzip(gzip.DefaultCompression))
 	r.Use(common.Sentinel()).
 		Use(common.RequestId(pkg.TrafficKey)).
 		Use(api.SetRequestLogger).
@@ -199,6 +201,7 @@ func initRouter() {
 		flag := strings.Contains(accept, "text/html")
 		if flag {
 			ctx.Writer.WriteHeader(200)
+			ctx.Header("Content-Type", "text/html; charset=utf-8")
 			ctx.Writer.WriteString(string(resource.Html))
 			ctx.Writer.Flush()
 		}
