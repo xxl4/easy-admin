@@ -1,6 +1,6 @@
 
-# easy-admin
-
+# Easy-Admin
+[![Go Reference](https://godoc.org/github.com/nicelizhi/easy-admin?status.svg)](https://godoc.org/github.com/nicelizhi/easy-admin)
 [![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
@@ -13,7 +13,7 @@
 
 ## About Easy-Admin
 
-Easyadmin is a Quick, beautiful and modern admin gererator for Go VUE application.
+Easyadmin is a Quick, beautiful and modern admin generator for Go VUE application.
 
 English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
@@ -26,9 +26,7 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 ##  Feature
 
-- Follow RESTful API design specifications
-
-- Based on the GIN WEB API framework, it provides rich middleware support (user authentication, cross-domain, access log, tracking ID, etc.)
+- Based on the GIN WEB API framework, it provides rich middleware support (user authentication, cross-domain, access log, tracking ID, Cahce, Zip etc.)
 
 - RBAC access control model based on Casbin
 
@@ -49,6 +47,10 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 - Multi-platform (Darwin Freebsd Linux Windows)
 
 - TimeZone Support
+
+- Static packaging for vue page
+
+- Gzip Support (Make it faster)
 
 
 ## Internal
