@@ -11,8 +11,9 @@ func TlsHandler() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		if config.SslConfig.Enable {
 			secureMiddleware := secure.New(secure.Options{
-				SSLRedirect: true,
-				SSLHost:     config.SslConfig.Domain,
+				SSLRedirect:   true,
+				SSLHost:       config.SslConfig.Domain,
+				IsDevelopment: true,
 			})
 			err := secureMiddleware.Process(c.Writer, c.Request)
 			if err != nil {
