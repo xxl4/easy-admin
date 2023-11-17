@@ -18,6 +18,10 @@ Easyadmin is a Quick, Easy, beautiful and modern admin gererator for Go VUE appl
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
 
+## online demo
+- [Vue2 demo](https://easy-admin-ui.vercel.app)  
+- [Arco demo](https://hello-arco-pro.vercel.app/)( testing now)  
+
 ## ✨ Feature
 
 - Follow RESTful API design specifications

@@ -14,6 +14,10 @@
 
 > 基于Gin + Arco Design的前后端分离权限管理系统,系统初始化极度简单.实现了Docker,docker-compose,二进制下载安装，K8S 部署方式。完美的实现了静态文件打包到GO中，很好的简化用户的使用体验。
 
+## 在线DEMO
+- [Vue2 demo](https://easy-admin-ui.vercel.app)  
+- [Arco demo](https://hello-arco-pro.vercel.app/)( testing now)  
+
 
 ## ✨ 特性
 

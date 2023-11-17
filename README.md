@@ -1,6 +1,6 @@
 
-# easy-admin
-
+# Easy-Admin
+[![Go Reference](https://godoc.org/github.com/nicelizhi/easy-admin?status.svg)](https://godoc.org/github.com/nicelizhi/easy-admin)
 [![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
 [![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
 [![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
@@ -8,6 +8,8 @@
 [![License](https://img.shields.io/github/license/nicelizhi/easy-admin
 )](https://github.com/nicelizhi/easy-admin)
 [![Commits](https://img.shields.io/github/commit-activity/m/nicelizhi/easy-admin?color=ffff00)](https://github.com/nicelizhi/easy-admin/commits/main)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicesteven/easy-admin)](https://hub.docker.com/r/nicesteven/easy-admin)
+
 
 ## About Easy-Admin
 
@@ -18,11 +20,13 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
 
-## ✨ Feature
+## Online demo
+- [Vue2 demo](https://easy-admin-ui.vercel.app)  
+- [Arco demo](https://hello-arco-pro.vercel.app/)( testing now)  
 
-- Follow RESTful API design specifications
+##  Feature
 
-- Based on the GIN WEB API framework, it provides rich middleware support (user authentication, cross-domain, access log, tracking ID, etc.)
+- Based on the GIN WEB API framework, it provides rich middleware support (user authentication, cross-domain, access log, tracking ID, Cahce, Zip etc.)
 
 - RBAC access control model based on Casbin
 
@@ -44,8 +48,10 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 - TimeZone Support
 
+- Static packaging for vue page
 
-## 🎁 Internal
+
+## Internal
 
 1. User management: The user is the system operator, this function mainly completes the system user configuration.
 2. Department management: configure the system organization (company, department, group), and display the tree structure to support data permissions.
