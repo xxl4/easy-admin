@@ -184,7 +184,11 @@ func initRouter() {
 	// if config.SslConfig.Enable {
 	r.Use(handler.TlsHandler()) // add more secure for it
 	// }
-	r.Use(gzip.Gzip(gzip.DefaultCompression))
+
+	if config.ApplicationConfig.Gzip {
+		r.Use(gzip.Gzip(config.ApplicationConfig.GzipLevel))
+	}
+
 	r.Use(common.Sentinel()).
 		Use(common.RequestId(pkg.TrafficKey)).
 		Use(api.SetRequestLogger).
