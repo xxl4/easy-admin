@@ -48,10 +48,6 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 - TimeZone Support
 
-- Static packaging for vue page
-
-- Gzip Support (Make it faster)
-
 
 ## Internal
 

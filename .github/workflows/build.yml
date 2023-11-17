@@ -68,6 +68,20 @@ jobs:
 
       - name: Build
         run: CGO_ENABLED=0 go build -ldflags="-s -w" -a -installsuffix "" -o easy-admin .
+
+      - name: Build the Docker image and push
+        run: |
+          docker login --username=${{ secrets.DOCKER_USERNAME }} registry.ap-southeast-1.aliyuncs.com --password=${{ secrets.DOCKER_PASSWORD }}
+          echo "************ docker login end"
+          docker build -t easy-admin:latest .
+          echo "************ docker build end"
+          docker tag easy-admin ${{ env.IMAGE_NAME_TAG }}
+          echo "************ docker tag end"
+          docker images
+          echo "************ docker images end"
+          docker push ${{ env.IMAGE_NAME_TAG }}  # 推送
+          echo "************ docker push end"
+        
           
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
