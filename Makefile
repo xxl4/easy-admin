@@ -26,7 +26,7 @@ build-ui:
 
 # build go application
 build:
-	CGO_ENABLED=0 go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o $(PROJECT) .
+	CGO_ENABLED=0 go mod tidy && go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o $(PROJECT) .
 
 # make build-linux
 build-linux:
@@ -55,6 +55,7 @@ start:
 	nohup ./$(PROJECT) server -c=config/settings.dev_steve.yml >> acc.txt &
 	ps aux | grep "$(PROJECT)"
 
+.PHONY: easy-admin
 stop:
 	pkill $(PROJECT)
 
