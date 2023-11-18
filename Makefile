@@ -1,5 +1,6 @@
 export PATH := $(GOPATH)/bin:$(PATH)
 export GO111MODULE=on
+export GOMAXPROCS=1
 GOCMD=go
 GOBUILD=$(GOCMD) build
 GOTEST=$(GOCMD) test
@@ -26,7 +27,7 @@ build-ui:
 
 # build go application
 build:
-	CGO_ENABLED=0 go mod tidy && go build -ldflags="$(LDFLAGS)" -a -installsuffix "" -o $(PROJECT) .
+	CGO_ENABLED=0 go mod tidy && go build -ldflags="$(LDFLAGS)" -gcflags="all=-c=1" -a -installsuffix "" -o $(PROJECT) .
 
 # make build-linux
 build-linux:
