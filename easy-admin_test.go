@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -15,7 +16,9 @@ func HomepageHandler(c *gin.Context) {
 }
 
 func SetUpRouter() *gin.Engine {
+	gin.SetMode(gin.TestMode)
 	router := gin.Default()
+	fmt.Println(router.Routes())
 	return router
 }
 func TestHomepageHandler(t *testing.T) {
@@ -28,4 +31,10 @@ func TestHomepageHandler(t *testing.T) {
 	// responseData, _ := ioutil.ReadAll(w.Body)
 	// assert.Equal(t, mockResponse, string(responseData))
 	assert.Equal(t, http.StatusOK, w.Code)
+}
+
+func TestUserLoginHandler(t *testing.T) {
+	// r := SetUpRouter()
+	// r.GET("/api/v1/getinfo", apis.SysUser.GetInfo)
+
 }
