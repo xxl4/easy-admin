@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: easy-admin
+spec:
+  selector:
+    matchLabels:
+      app: easy-admin
+  template:
+    metadata:
+      labels:
+        app: easy-admin
+    spec:
+      containers:
+      - name: easy-admin
+        image: nicesteven/easy-admin:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: easy-admin
+          mountPath: /temp
+        - name: easy-admin
+          mountPath: /static
+        - name: easy-admin-config
+          mountPath: /config/
+          readOnly: true
+    volumes:
+      - name: easy-admin
+        persistentVolumeClaim:
+          claimName: easy-admin
+      - name: easy-admin-config
+        configMap:
+          name: settings-admin
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: easy-admin-svc
+spec:
+  selector:
+    app: easy-admin-port
+  ports:
+    - port: 8080
+      targetPort: 8080
