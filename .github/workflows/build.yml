@@ -101,7 +101,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: nicesteven/easy-admin:1.3.0
+          tags: nicesteven/easy-admin:1.4.0
       
       - name: Build and push Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
