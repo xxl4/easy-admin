@@ -14,46 +14,28 @@
 ### 3、Start It
 ```
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: easy-admin
-  labels:
-    app: easy-admin
-    service: easy-admin
-spec:
-  ports:
-  - port: 8000
-    name: http
-    protocol: TCP
-  selector:
-    app: easy-admin
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: easy-admin-v1
-  labels:
-    app: easy-admin
-    version: v1
+  name: easy-admin
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: easy-admin
-      version: v1
   template:
     metadata:
       labels:
         app: easy-admin
-        version: v1
     spec:
       containers:
       - name: easy-admin
-        image: registry.ap-southeast-1.aliyuncs.com/kuops/easy-admin:1.10
-        imagePullPolicy: IfNotPresent
+        image: nicesteven/easy-admin:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
         volumeMounts:
         - name: easy-admin
           mountPath: /temp
@@ -62,13 +44,24 @@ spec:
         - name: easy-admin-config
           mountPath: /config/
           readOnly: true
-      volumes:
+    volumes:
       - name: easy-admin
         persistentVolumeClaim:
           claimName: easy-admin
       - name: easy-admin-config
         configMap:
           name: settings-admin
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: easy-admin-svc
+spec:
+  selector:
+    app: easy-admin-port
+  ports:
+    - port: 8080
+      targetPort: 8080
 ---
 ````
 ```
