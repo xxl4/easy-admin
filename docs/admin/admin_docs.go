@@ -12,7 +12,7 @@ const docTemplateadmin = `{
         "contact": {},
         "license": {
             "name": "Apache 2.0",
-            "url": "https://github.com/nicelizhi/easy-admin/blob/master/LICENSE.md"
+            "url": "https://github.com/nicelizhi/easy-admin/blob/main/LICENSE.md"
         },
         "version": "{{.Version}}"
     },
@@ -4381,7 +4381,7 @@ const docTemplateadmin = `{
 
 // SwaggerInfoadmin holds exported Swagger Info so clients can modify it
 var SwaggerInfoadmin = &swag.Spec{
-	Version:          "1.0.0",
+	Version:          "1.4.0",
 	Host:             "",
 	BasePath:         "",
 	Schemes:          []string{},
