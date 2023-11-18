@@ -77,7 +77,7 @@ swag init --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
 # Online wagger Document
 
 ```
-http://localhost:8000/swagger/admin/index.html
+https://editor.swagger.io/?url=https://nicelizhi.github.io/easy-admin/admin/admin_swagger.yaml
 ```
 
 # Install
