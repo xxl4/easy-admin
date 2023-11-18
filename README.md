@@ -48,6 +48,8 @@ English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
 
 - TimeZone Support
 
+- Gzip Support, make your application faster.
+
 
 ## Internal
 
@@ -101,4 +103,4 @@ http://localhost:8000/swagger/admin/index.html
 [https://gitee.com/nicelizhi/easy-admin/issues](https://gitee.com/nicelizhi/easy-admin/issues)  (中国)
 
 # Discussions
-[https://github.com/nicelizhi/easy-admin/discussions](https://github.com/nicelizhi/easy-admin/discussions) 
+[discussions](https://github.com/nicelizhi/easy-admin/discussions) 
