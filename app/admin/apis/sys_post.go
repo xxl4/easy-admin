@@ -82,7 +82,7 @@ func (e SysPost) Get(c *gin.Context) {
 
 	err = s.Get(&req, &object)
 	if err != nil {
-		e.Error(500, err, fmt.Sprintf("岗位信息获取失败！错误详情：%s", err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Failed to obtain position information Error details"), err.Error()))
 		return
 	}
 
@@ -115,7 +115,7 @@ func (e SysPost) Insert(c *gin.Context) {
 	req.SetCreateBy(user.GetUserId(c))
 	err = s.Insert(&req)
 	if err != nil {
-		e.Error(500, err, fmt.Sprintf("新建岗位失败！错误详情：%s", err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Failed to create new position Error details"), err.Error()))
 		return
 	}
 	e.OK(req.GetId(), ginI18n.MustGetMessage(c, "Created successfully"))
@@ -149,7 +149,7 @@ func (e SysPost) Update(c *gin.Context) {
 
 	err = s.Update(&req)
 	if err != nil {
-		e.Error(500, err, fmt.Sprintf("岗位更新失败！错误详情：%s", err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Position update failed error details"), err.Error()))
 		return
 	}
 	e.OK(req.GetId(), ginI18n.MustGetMessage(c, "Update completed"))
@@ -179,7 +179,7 @@ func (e SysPost) Delete(c *gin.Context) {
 	req.SetUpdateBy(user.GetUserId(c))
 	err = s.Remove(&req)
 	if err != nil {
-		e.Error(500, err, fmt.Sprintf("岗位删除失败！错误详情：%s", err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Position update failed error details"), err.Error()))
 		return
 	}
 	e.OK(req.GetId(), ginI18n.MustGetMessage(c, "Successfully deleted"))
