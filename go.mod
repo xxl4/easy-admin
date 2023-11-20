@@ -20,7 +20,7 @@ require (
 	github.com/mssola/user_agent v0.6.0
 	github.com/nicelizhi/easy-admin-core v0.0.0-00010101000000-000000000000
 	github.com/nicelizhi/easy-admin-core/sdk v0.0.0-00010101000000-000000000000
-	github.com/opentracing/opentracing-go v1.1.0
+	github.com/opentracing/opentracing-go v1.2.0
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.17.0
 	github.com/qiniu/go-sdk/v7 v7.18.2
