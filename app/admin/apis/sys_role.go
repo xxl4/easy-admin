@@ -131,13 +131,13 @@ func (e SysRole) Insert(c *gin.Context) {
 	err = s.Insert(&req, cb)
 	if err != nil {
 		e.Logger.Error(err)
-		e.Error(500, err, "创建失败,"+err.Error())
+		e.Error(500, err, ginI18n.MustGetMessage(c, "Creation failed")+err.Error())
 		return
 	}
 	_, err = global.LoadPolicy(c)
 	if err != nil {
 		e.Logger.Error(err)
-		e.Error(500, err, "创建失败,"+err.Error())
+		e.Error(500, err, ginI18n.MustGetMessage(c, "Creation failed")+err.Error())
 		return
 	}
 	e.OK(req.GetId(), ginI18n.MustGetMessage(c, "Created successfully"))
@@ -179,7 +179,7 @@ func (e SysRole) Update(c *gin.Context) {
 	_, err = global.LoadPolicy(c)
 	if err != nil {
 		e.Logger.Error(err)
-		e.Error(500, err, "更新失败,"+err.Error())
+		e.Error(500, err, ginI18n.MustGetMessage(c, "Update failed")+err.Error())
 		return
 	}
 
@@ -204,7 +204,7 @@ func (e SysRole) Delete(c *gin.Context) {
 		Errors
 	if err != nil {
 		e.Logger.Error(err)
-		e.Error(500, err, fmt.Sprintf("删除角色 %v 失败，\r\n失败信息 %s", req.Ids, err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Delete role failed failure message"), req.Ids, err.Error()))
 		return
 	}
 
@@ -216,7 +216,7 @@ func (e SysRole) Delete(c *gin.Context) {
 		return
 	}
 
-	e.OK(req.GetId(), fmt.Sprintf("删除角色角色 %v 状态成功！", req.GetId()))
+	e.OK(req.GetId(), fmt.Sprintf(ginI18n.MustGetMessage(c, "Delete role role status successful"), req.GetId()))
 }
 
 // Update2Status 修改用户角色状态
@@ -239,16 +239,16 @@ func (e SysRole) Update2Status(c *gin.Context) {
 		Errors
 	if err != nil {
 		e.Logger.Error(err)
-		e.Error(500, err, fmt.Sprintf("更新角色状态失败，失败原因：%s ", err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Failed to update role status reason for failure"), err.Error()))
 		return
 	}
 	req.SetUpdateBy(user.GetUserId(c))
 	err = s.UpdateStatus(&req)
 	if err != nil {
-		e.Error(500, err, fmt.Sprintf("更新角色状态失败，失败原因：%s ", err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Failed to update role status reason for failure"), err.Error()))
 		return
 	}
-	e.OK(req.GetId(), fmt.Sprintf("更新角色 %v 状态成功！", req.GetId()))
+	e.OK(req.GetId(), fmt.Sprintf(ginI18n.MustGetMessage(c, "Update role status successful"), req.GetId()))
 }
 
 // Update2DataScope 更新角色数据权限
@@ -282,8 +282,8 @@ func (e SysRole) Update2DataScope(c *gin.Context) {
 	data.UpdateBy = user.GetUserId(c)
 	err = s.UpdateDataScope(&req).Error
 	if err != nil {
-		e.Error(500, err, fmt.Sprintf("更新角色数据权限失败！错误详情：%s", err.Error()))
+		e.Error(500, err, fmt.Sprintf(ginI18n.MustGetMessage(c, "Failed to update role data permission! Error details"), err.Error()))
 		return
 	}
-	e.OK(nil, "操作成功")
+	e.OK(nil, ginI18n.MustGetMessage(c, "Options Success"))
 }

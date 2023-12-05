@@ -1,9 +1,12 @@
 # 二进制下载安装
 > 通过此方案，简单的通过下载对应平台的可执行文件，做下简单的文件配置就可以完成应用的开启使用
 
+
+
 [English](https://nicelizhi.github.io/easy-admin/guide/install/binary) | 简体中文
 
 ### 1、准备
+> [在线教学视频](https://www.youtube.com/watch?v=i6g7AoLhrUQ)  
 > [Easy Admin 官方下载页面](https://github.com/nicelizhi/easy-admin/releases) 下载可执行文件
 
 
@@ -27,5 +30,4 @@ netstat -an | grep 8000
 ```
 
 ### 提交BUG与建议
-https://github.com/nicelizhi/easy-admin/issues
-
+[提交](https://github.com/nicelizhi/easy-admin/issues)
