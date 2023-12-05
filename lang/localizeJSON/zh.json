@@ -43,6 +43,9 @@
     "Failed to update role status reason for failure": "更新角色状态失败，失败原因：%s",
     "Delete role role status successful": "删除角色角色 %v 状态成功！",
     "Delete role failed failure message": "删除角色 %v 失败，\r\n失败信息 %s",
+    "Failed to obtain position information Error details": "岗位信息获取失败！错误详情：%s",
+    "Failed to create new position Error details": "新建岗位失败！错误详情：%s",
+    "Position update failed error details": "岗位更新失败！错误详情：%s",
 
     
 
