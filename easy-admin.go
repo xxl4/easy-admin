@@ -5,7 +5,7 @@ import (
 )
 
 // @title Easy-Admin
-// @version 1.4.0
+// @version 1.5.0
 // @description 基于Gin + Vue 的前后端分离权限管理系统的接口文档
 // @license.name Apache 2.0
 // @license.url https://github.com/nicelizhi/easy-admin/blob/main/LICENSE.md

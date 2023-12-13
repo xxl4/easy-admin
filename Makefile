@@ -10,7 +10,7 @@ LDFLAGS := -s -w
 # application name
 PROJECT:=easy-admin
 # application version
-VERSION := 1.4.0
+VERSION := 1.5.0
 # application url
 URL := https://github.com/nicelizhi/easy-admin
 
