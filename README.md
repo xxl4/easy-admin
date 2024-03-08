@@ -1,13 +1,13 @@
 
 # Easy-Admin
-[![Go Reference](https://godoc.org/github.com/nicelizhi/easy-admin?status.svg)](https://godoc.org/github.com/nicelizhi/easy-admin)
-[![Build Status](https://github.com/nicelizhi/easy-admin/workflows/Build/badge.svg)](https://github.com/nicelizhi/easy-admin)
-[![Release](https://img.shields.io/github/release/nicelizhi/easy-admin.svg?style=flat-square)](https://github.com/nicelizhi/easy-admin/releases)
-[![Go Report Card](https://goreportcard.com/badge/github.com/nicelizhi/easy-admin)](https://goreportcard.com/report/github.com/nicelizhi/easy-admin)
-[![HitCount](https://views.whatilearened.today/views/github/nicelizhi/easy-admin.svg)](https://github.com/nicelizhi/easy-admin)
-[![License](https://img.shields.io/github/license/nicelizhi/easy-admin
-)](https://github.com/nicelizhi/easy-admin)
-[![Commits](https://img.shields.io/github/commit-activity/m/nicelizhi/easy-admin?color=ffff00)](https://github.com/nicelizhi/easy-admin/commits/main)
+[![Go Reference](https://godoc.org/github.com/xxl4/easy-admin?status.svg)](https://godoc.org/github.com/xxl4/easy-admin)
+[![Build Status](https://github.com/xxl4/easy-admin/workflows/Build/badge.svg)](https://github.com/xxl4/easy-admin)
+[![Release](https://img.shields.io/github/release/xxl4/easy-admin.svg?style=flat-square)](https://github.com/xxl4/easy-admin/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/xxl4/easy-admin)](https://goreportcard.com/report/github.com/xxl4/easy-admin)
+[![HitCount](https://views.whatilearened.today/views/github/xxl4/easy-admin.svg)](https://github.com/xxl4/easy-admin)
+[![License](https://img.shields.io/github/license/xxl4/easy-admin
+)](https://github.com/xxl4/easy-admin)
+[![Commits](https://img.shields.io/github/commit-activity/m/xxl4/easy-admin?color=ffff00)](https://github.com/xxl4/easy-admin/commits/main)
 [![Docker Pulls](https://img.shields.io/docker/pulls/nicesteven/easy-admin)](https://hub.docker.com/r/nicesteven/easy-admin)
 
 
@@ -15,7 +15,7 @@
 
 Easyadmin is a Quick, beautiful and modern admin generator for Go VUE application.
 
-English | [简体中文](https://nicelizhi.github.io/easy-admin/zh/)
+English | [简体中文](https://xxl4.github.io/easy-admin/zh/)
 
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
@@ -77,30 +77,30 @@ swag init --parseDependency --parseDepth=6 --instanceName admin -o ./docs/admin
 # Online wagger Document
 
 ```
-https://editor.swagger.io/?url=https://nicelizhi.github.io/easy-admin/admin/admin_swagger.yaml
+https://editor.swagger.io/?url=https://xxl4.github.io/easy-admin/admin/admin_swagger.yaml
 ```
 
 # Install
 
-- [Docker Install](https://nicelizhi.github.io/easy-admin/guide/install/docker)
+- [Docker Install](https://xxl4.github.io/easy-admin/guide/install/docker)
 
-- [Docker Composer Install](https://nicelizhi.github.io/easy-admin/guide/install/docker-composer)
+- [Docker Composer Install](https://xxl4.github.io/easy-admin/guide/install/docker-composer)
 
-- [K8s Install](https://nicelizhi.github.io/easy-admin/guide/install/k8s)
+- [K8s Install](https://xxl4.github.io/easy-admin/guide/install/k8s)
 
-- [Binary Install](https://nicelizhi.github.io/easy-admin/guide/install/binary)
+- [Binary Install](https://xxl4.github.io/easy-admin/guide/install/binary)
 
 
 # Configure
 
-[Configure Docs](https://nicelizhi.github.io/easy-admin/guide/configure/)
+[Configure Docs](https://xxl4.github.io/easy-admin/guide/configure/)
 
 # Document
-[https://nicelizhi.github.io/easy-admin/](https://nicelizhi.github.io/easy-admin/) 
+[https://xxl4.github.io/easy-admin/](https://xxl4.github.io/easy-admin/) 
 
 # Issue
-[https://github.com/nicelizhi/easy-admin/issues](https://github.com/nicelizhi/easy-admin/issues)   
-[https://gitee.com/nicelizhi/easy-admin/issues](https://gitee.com/nicelizhi/easy-admin/issues)  (中国)
+[https://github.com/xxl4/easy-admin/issues](https://github.com/xxl4/easy-admin/issues)   
+[https://gitee.com/xxl4/easy-admin/issues](https://gitee.com/xxl4/easy-admin/issues)  (中国)
 
 # Discussions
-[discussions](https://github.com/nicelizhi/easy-admin/discussions) 
+[discussions](https://github.com/xxl4/easy-admin/discussions) 
