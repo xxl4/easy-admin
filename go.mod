@@ -31,7 +31,7 @@ require (
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
 	github.com/swaggo/swag v1.16.2
-	github.com/unrolled/secure v1.0.8
+	github.com/unrolled/secure v1.14.0
 	golang.org/x/crypto v0.17.0
 	golang.org/x/text v0.14.0
 	gorm.io/driver/mysql v1.5.2
