@@ -15,7 +15,7 @@
 
 Easyadmin is a Quick, beautiful and modern admin generator for Go VUE application.
 
-English | [简体中文](https://xxl4.github.io/easy-admin/zh/)
+English | [Chinese](https://xxl4.github.io/easy-admin/zh/)
 
 
 >> The front-end and back-end separation authority management system based on Gin + Vue  is extremely simple to initialize the system. You only need to modify the database connection in the configuration file. The system supports multi-instruction operations. Migration instructions can make it easier to initialize database information. Service instructions It's easy to start the api service.
@@ -100,7 +100,7 @@ https://editor.swagger.io/?url=https://xxl4.github.io/easy-admin/admin/admin_swa
 
 # Issue
 [https://github.com/xxl4/easy-admin/issues](https://github.com/xxl4/easy-admin/issues)   
-[https://gitee.com/xxl4/easy-admin/issues](https://gitee.com/xxl4/easy-admin/issues)  (中国)
+[https://gitee.com/xxl4/easy-admin/issues](https://gitee.com/xxl4/easy-admin/issues)  (China)
 
 # Discussions
 [discussions](https://github.com/xxl4/easy-admin/discussions) 
