@@ -1,5 +1,4 @@
 package main
-
 import (
 	"github.com/nicelizhi/easy-admin/cmd"
 )
