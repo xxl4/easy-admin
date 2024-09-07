@@ -50,7 +50,7 @@ jobs:
           git submodule update --remote --recursive
 
       - name: npm install
-        run: cd ./ui/ && npm install --legacy-peer-deps
+        run: cd ./ui/ && rm -f package-lock.json && npm install --legacy-peer-deps
       
       - name : npm build
         run: cd ./ui/ && npm run build:prod:base --legacy-peer-deps
